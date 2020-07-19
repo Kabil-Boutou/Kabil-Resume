@@ -1,0 +1,33 @@
+import { Global, css } from '@emotion/core'
+import { CSSReset, useColorMode } from '@chakra-ui/core'
+
+import { LightTheme, DarkTheme } from 'styles/mode'
+
+export default function GlobalStyle({ children }) {
+  const { colorMode } = useColorMode()
+  return (
+    <>
+      <CSSReset />
+      <Global
+        styles={css`
+          ${colorMode === 'light' ? LightTheme : DarkTheme};
+          ::selection {
+            background-color: #47a3f3;
+            color: #fefefe;
+          }
+          html {
+            min-width: 360px;
+            scroll-behavior: smooth;
+          }
+          #__next {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: ${colorMode === 'light' ? 'white' : '#000'};
+          }
+        `}
+      />
+      {children}
+    </>
+  )
+}
