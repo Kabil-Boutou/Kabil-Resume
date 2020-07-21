@@ -1,6 +1,19 @@
 import React from 'react'
 import { NextSeo } from 'next-seo'
-import { useColorMode, useTheme, Box, Heading, Text, Flex, Stack, Avatar } from '@chakra-ui/core'
+import {
+  useColorMode,
+  useTheme,
+  Box,
+  Heading,
+  Text,
+  Flex,
+  Stack,
+  Avatar,
+  SimpleGrid,
+  Divider,
+  List,
+  ListItem,
+} from '@chakra-ui/core'
 
 import Container from 'components/Container'
 import Feature from 'components/HalfContent'
@@ -36,12 +49,54 @@ const About = () => {
           maxWidth="700px"
           border={1}
         >
-          <Flex flexDirection="column" justifyContent="flex-start" alignItems="center" maxWidth="700px">
+          <Flex
+            flexDirection="column"
+            justifyContent="flex-start"
+            alignItems="center"
+            maxWidth="700px"
+            borderWidth="1px"
+            p="2%"
+            borderRadius="10px"
+          >
             {/* <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
               About Me
             </Heading> */}
             <Avatar mb={5} alignItems="flex-center" size="2xl" name="Kabil Boutou" src="https://bit.ly/sage-adebayo" />
-            <Box borderWidth="1px" p="2%" borderRadius="10px">
+            <SimpleGrid columns={2} spacing={10}>
+              <Box mb={4} textAlign="center">
+                <Heading letterSpacing="tight" mb={2} as="h6">
+                  Introduction
+                </Heading>
+                <Text color={theme.fontColors[colorMode]}>
+                  Evolving my decision-making skills has always been one of my ultimate goals, I always seek for
+                  learning from more experienced people and share my humbled knowledge with the ones whom needs it.
+                  <br />
+                  <Text as="cite">
+                    «In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.»
+                    - Oliver BRONZINI • CEO MALTEM AFRICA
+                  </Text>
+                </Text>
+              </Box>
+              <Box mb={4}>
+                <Heading letterSpacing="tight" mb={2} as="h6" textAlign="center">
+                  Skills
+                </Heading>
+                <List styleType="disc" color={theme.fontColors[colorMode]}>
+                  <ListItem>NextJs, ReactJs, Apollo client, Prisma</ListItem>
+                  <ListItem>NodeJs, ExpressJs, KnexJs, GraphQL</ListItem>
+                  <ListItem>PostgreSQL, MonogoDB, Firebase</ListItem>
+                  <ListItem>WordPress, Strapi</ListItem>
+                  <ListItem>Git, Trello, Jira</ListItem>
+                  <ListItem>PM2, Nginx</ListItem>
+                  <ListItem>Vercel, AWS, DigitalOcean</ListItem>
+                </List>
+              </Box>
+            </SimpleGrid>
+            <Divider borderColor={theme.fontColors[colorMode]} />
+            <Box>
+              <Heading letterSpacing="tight" mb={2} as="h6" textAlign="center">
+                Work Experience
+              </Heading>
               <Text color={theme.fontColors[colorMode]} mb={4}>
                 Hey, I’m Lee. I live in Des Moines, IA and I’m a Senior Software Engineer at&nbsp; , a $10B grocery tech
                 company in the Midwest. As a tech lead, my primary focus is developing Aisles Online, Hy-Vee’s
@@ -54,17 +109,6 @@ const About = () => {
                 new course called&nbsp;
               </Text>
             </Box>
-            <Text color={theme.fontColors[colorMode]} mb={4}>
-              I’ve spoken across the country at conferences and meet-ups about front-end development, design, and
-              recruiting. I also actively contribute to my blog, which attracts thousands of readers every month. I
-              mostly write about development, tech careers, and my personal life. If you'd like to follow along,
-              subscribe to&nbsp;
-            </Text>
-            <Text color={theme.fontColors[colorMode]} mb={4}>
-              I grew up in small-town Iowa and went to school at Iowa State, graduating with a degree in Computer
-              Engineering. I spend my free time playing music, creating videos, and enjoying time with friends and
-              family.
-            </Text>
           </Flex>
         </Stack>
 

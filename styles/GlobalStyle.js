@@ -1,3 +1,4 @@
+import React from 'react'
 import { Global, css } from '@emotion/core'
 import { CSSReset, useColorMode } from '@chakra-ui/core'
 
