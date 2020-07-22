@@ -17,6 +17,7 @@ import {
 
 import Container from 'components/Container'
 import Feature from 'components/HalfContent'
+import WorkExp from 'components/WorkExp'
 
 const url = `${process.env.url}/about`
 const title = 'About Me – Kabil Boutou'
@@ -24,10 +25,6 @@ const title = 'About Me – Kabil Boutou'
 const About = () => {
   const { colorMode } = useColorMode()
   const theme = useTheme()
-  const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400',
-  }
 
   return (
     <>
@@ -64,7 +61,7 @@ const About = () => {
             <Avatar mb={5} alignItems="flex-center" size="2xl" name="Kabil Boutou" src="https://bit.ly/sage-adebayo" />
             <SimpleGrid columns={2} spacing={10}>
               <Box mb={4} textAlign="center">
-                <Heading letterSpacing="tight" mb={2} as="h6">
+                <Heading letterSpacing="tight" mb={2} as="h1" size="xl">
                   Introduction
                 </Heading>
                 <Text color={theme.fontColors[colorMode]}>
@@ -78,7 +75,7 @@ const About = () => {
                 </Text>
               </Box>
               <Box mb={4}>
-                <Heading letterSpacing="tight" mb={2} as="h6" textAlign="center">
+                <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign="center">
                   Skills
                 </Heading>
                 <List styleType="disc" color={theme.fontColors[colorMode]}>
@@ -94,25 +91,18 @@ const About = () => {
             </SimpleGrid>
             <Divider borderColor={theme.fontColors[colorMode]} />
             <Box>
-              <Heading letterSpacing="tight" mb={2} as="h6" textAlign="center">
+              <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign="center">
                 Work Experience
               </Heading>
-              <Text color={theme.fontColors[colorMode]} mb={4}>
-                Hey, I’m Lee. I live in Des Moines, IA and I’m a Senior Software Engineer at&nbsp; , a $10B grocery tech
-                company in the Midwest. As a tech lead, my primary focus is developing Aisles Online, Hy-Vee’s
-                e-commerce grocery shopping platform – which serves millions of customers every year. I also help
-                maintain our internal component library.
-              </Text>
-              <Text color={theme.fontColors[colorMode]} mb={4}>
-                At the beginning of 2020, I launched my most ambitious project – a 50+ lesson video course on React and
-                Next.js. It’s called&nbsp; , and it’s been my most successful solo-endeavor so far. I'm now building a
-                new course called&nbsp;
-              </Text>
+              <WorkExp logo="Eqdom" post="Full Stack" ent="Eqdom" time="Jul 2020 - present" />
+              <WorkExp logo="sg" post="Web Dev" ent="Societe Generale" time="Aout 2019 - Jul 2020" />
+              <WorkExp logo="Saham" post="Web Dev" ent="Saham Group" time="Aout 2018 - June 2020" />
+              <WorkExp logo="Maltem2" post="Consultant" ent="Maltem Africa" time="May 2018 - present" />
             </Box>
           </Flex>
         </Stack>
 
-        <Stack isInline spacing={8} align="center" spacing={8} m="0 auto 4rem auto" maxWidth="700px">
+        <Stack isInline spacing={8} align="center" m="0 auto 4rem auto" maxWidth="700px">
           <Feature title="Plan Money" desc="The future can be even brighter but a goal without a plan is just a wish" />
           <Feature
             title="Save Money"
