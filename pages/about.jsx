@@ -55,9 +55,6 @@ const About = () => {
             p="2%"
             borderRadius="10px"
           >
-            {/* <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-              About Me
-            </Heading> */}
             <Avatar mb={5} alignItems="flex-center" size="2xl" name="Kabil Boutou" src="https://bit.ly/sage-adebayo" />
             <SimpleGrid columns={2} spacing={10}>
               <Box mb={4} textAlign="center">
@@ -79,8 +76,8 @@ const About = () => {
                   Skills
                 </Heading>
                 <List styleType="disc" color={theme.fontColors[colorMode]}>
-                  <ListItem>NextJs, ReactJs, Apollo client, Prisma</ListItem>
-                  <ListItem>NodeJs, ExpressJs, KnexJs, GraphQL</ListItem>
+                  <ListItem>Next.Js, React.Js, Apollo client, Prisma</ListItem>
+                  <ListItem>Node.Js, Express.Js, KnexJs, GraphQL</ListItem>
                   <ListItem>PostgreSQL, MonogoDB, Firebase</ListItem>
                   <ListItem>WordPress, Strapi</ListItem>
                   <ListItem>Git, Trello, Jira</ListItem>
@@ -94,10 +91,29 @@ const About = () => {
               <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign="center">
                 Work Experience
               </Heading>
-              <WorkExp logo="Eqdom" post="Full Stack" ent="Eqdom" time="Jul 2020 - present" />
-              <WorkExp logo="sg" post="Web Dev" ent="Societe Generale" time="Aout 2019 - Jul 2020" />
-              <WorkExp logo="Saham" post="Web Dev" ent="Saham Group" time="Aout 2018 - June 2020" />
-              <WorkExp logo="Maltem2" post="Consultant" ent="Maltem Africa" time="May 2018 - present" />
+              <WorkExp logo="Eqdom.png" logoName="Eqdom" post="Full Stack" ent="Eqdom" time="Jul 2020 - present" />
+              <WorkExp
+                logo="sg.png"
+                logoName="Societe Generale"
+                post="Web Dev"
+                ent="Societe Generale"
+                time="Aug 2019 - Jul 2020"
+              />
+              <WorkExp logo="Saham.png" logoName="Saham" post="Web Dev" ent="Saham Group" time="Aug 2018 - Jun 2020" />
+              <WorkExp
+                logo="Maltem.png"
+                logoName="Maltem"
+                post="Consultant"
+                ent="Maltem Africa"
+                time="May 2018 - present"
+              />
+              <WorkExp
+                logo="uf.jpg"
+                logoName="Urban Fusion"
+                post="Web Dev"
+                ent="Urban Fusion"
+                time="Mar 2017 - Apr 2018"
+              />
             </Box>
           </Flex>
         </Stack>
