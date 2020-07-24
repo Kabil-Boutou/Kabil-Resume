@@ -1,7 +1,19 @@
 import React from 'react'
-import { Box, Avatar, Flex, Divider, Text, useTheme, useColorMode, Icon, List, ListItem } from '@chakra-ui/core'
+import {
+  Box,
+  Avatar,
+  Flex,
+  Divider,
+  Text,
+  useTheme,
+  useColorMode,
+  Icon,
+  List,
+  ListItem,
+  ListIcon,
+} from '@chakra-ui/core'
 
-export default function WorkExp({ logoName, logo, post, ent, time, tasks }) {
+export default function WorkExp({ logoName, logo, post, ent, time, intro, tasks, ItStack }) {
   const { colorMode } = useColorMode()
   const theme = useTheme()
   return (
@@ -21,20 +33,28 @@ export default function WorkExp({ logoName, logo, post, ent, time, tasks }) {
           <Text color="tomato">{time}</Text>
         </span>
       </Flex>
+
       <Text color={theme.fontColors[colorMode]} mb={4}>
-        {tasks}
-        <Icon name="chevron-right" color="tomato" /> Hey, I’m Lee. I live in Des Moines, IA and I’m a Senior Software
-        Engineer at&nbsp; , a $10B grocery tech com pany in the Midwest. As a tech lead, my primary focus is developing
-        Aisles Online, Hy-Vee’s e-commerce grocery shopping platform – which serves millions of customers every year. I
-        also help maintain our internal component library.
+        <Icon name="chevron-right" color="tomato" /> {intro}
       </Text>
+
       <Text color={theme.fontColors[colorMode]} mb={4}>
         <List>
-          {[...new Array(5)].map((_, key) => {
-            return <ListItem key={key}> React</ListItem>
-          })}
+          {tasks &&
+            tasks.map((task, key) => {
+              return (
+                <ListItem key={key}>
+                  <ListIcon icon="chevron-right" color="tomato" />
+                  {task}
+                </ListItem>
+              )
+            })}
         </List>
       </Text>
+      <Box mb={4}>
+        <Text color="tomato">Technology stack :</Text>
+        <Text color={theme.fontColors[colorMode]}>{ItStack}</Text>
+      </Box>
     </Box>
   )
 }

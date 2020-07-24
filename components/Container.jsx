@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NextLink from 'next/link'
 import { useColorMode, Button, Flex, Box, IconButton } from '@chakra-ui/core'
 import styled from '@emotion/styled'
@@ -15,6 +15,7 @@ const StickyNav = styled(Flex)`
 
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode()
+  const [lang, setLang] = useState('En')
 
   const bgColor = {
     light: 'white',
@@ -28,14 +29,17 @@ const Container = ({ children }) => {
     light: 'rgba(255, 255, 255, 0.8)',
     dark: 'rgba(0, Ø, 0, 0.8)',
   }
-
+  const switchLang = () => {
+    if (lang === 'Fr') setLang('En')
+    else setLang('Fr')
+  }
   return (
     <>
       <StickyNav
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
-        maxWidth="900px"
+        maxWidth="770px"
         width="100%"
         bg={navBgColor[colorMode]}
         as="nav"
@@ -44,12 +48,18 @@ const Container = ({ children }) => {
         mb={8}
         mx="auto"
       >
-        <IconButton
-          aria-label="Toggle dark mode"
-          icon={colorMode === 'dark' ? 'sun' : 'moon'}
-          onClick={toggleColorMode}
-        />
-        {/*    <Box>
+        <Box>
+          <IconButton
+            aria-label="Toggle dark mode"
+            icon={colorMode === 'dark' ? 'sun' : 'moon'}
+            onClick={toggleColorMode}
+            mr={3}
+          />
+          <Button aria-label="Switch langue" onClick={switchLang} w={4}>
+            {lang}
+          </Button>
+        </Box>
+        <Box>
           <NextLink href="/dashboard" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
               Dashboard
@@ -70,7 +80,7 @@ const Container = ({ children }) => {
               Home
             </Button>
           </NextLink>
-        </Box> */}
+        </Box>
       </StickyNav>
       <Flex
         as="main"

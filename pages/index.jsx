@@ -21,7 +21,32 @@ import WorkExp from 'components/WorkExp'
 
 const url = `${process.env.url}/about`
 const title = 'About Me – Kabil Boutou'
+const Experiences = [
+  {
+    tasks: [
+      'Analyze customer needs and expectations',
+      'Provide proposals in sprint planning',
+      'Establish a working method with the team',
+      'Design and realization of the solution in question',
+      'Animat demonstrations',
+    ],
+    intro: ``,
+    ItStack: ``,
+  },
+  { tasks: [], intro: ``, ItStack: `` },
 
+  { tasks: [], intro: ``, ItStack: `` },
+  { tasks: [], intro: ``, ItStack: `` },
+  {
+    tasks: [],
+    intro: `
+    Web sites development and deployment on behalf of the agency's clients,
+    creat and adapt ERP modules such as accounting for clients bills and managing employes vecations.
+    Recruting and helping interns.`,
+    ItStack: `NodeJS, ExpressJS, HandelbarsJS, ReactJS, Redux, FireBase, PasportJS, REST API, KeystoneJS, SocketIO, PayPal
+    API, JQuery, MongoDB, Mongoose, Slack, BitBucket.`,
+  },
+]
 const About = () => {
   const { colorMode } = useColorMode()
   const theme = useTheme()
@@ -61,7 +86,7 @@ const About = () => {
                 <Heading letterSpacing="tight" mb={2} as="h1" size="xl">
                   Introduction
                 </Heading>
-                <Text color={theme.fontColors[colorMode]}>
+                <Text color={theme.fontColors[colorMode]} textAlign="justify">
                   Evolving my decision-making skills has always been one of my ultimate goals, I always seek for
                   learning from more experienced people and share my humbled knowledge with the ones whom needs it.
                   <br />
@@ -76,13 +101,14 @@ const About = () => {
                   Skills
                 </Heading>
                 <List styleType="disc" color={theme.fontColors[colorMode]}>
-                  <ListItem>Next.Js, React.Js, Apollo client, Prisma</ListItem>
+                  <ListItem>Next.Js, React.Js, Apollo client, Prisma2</ListItem>
                   <ListItem>Node.Js, Express.Js, KnexJs, GraphQL</ListItem>
                   <ListItem>PostgreSQL, MonogoDB, Firebase</ListItem>
-                  <ListItem>WordPress, Strapi</ListItem>
-                  <ListItem>Git, Trello, Jira</ListItem>
-                  <ListItem>PM2, Nginx</ListItem>
                   <ListItem>Vercel, AWS, DigitalOcean</ListItem>
+                  <ListItem>WordPress, Strapi</ListItem>
+                  <ListItem>PM2, Nginx</ListItem>
+                  <ListItem>Git, Trello, Jira</ListItem>
+                  <ListItem>Scrum / Kanban Framework</ListItem>
                 </List>
               </Box>
             </SimpleGrid>
@@ -91,21 +117,45 @@ const About = () => {
               <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign="center">
                 Work Experience
               </Heading>
-              <WorkExp logo="Eqdom.png" logoName="Eqdom" post="Full Stack" ent="Eqdom" time="Jul 2020 - present" />
+              <WorkExp
+                logo="Eqdom.png"
+                logoName="Eqdom"
+                post="Full Stack"
+                ent="Eqdom"
+                time="Jul 2020 - present"
+                tasks={Experiences[0].tasks}
+                intro={Experiences[0].intro}
+                ItStack={Experiences[0].ItStack}
+              />
               <WorkExp
                 logo="sg.png"
                 logoName="Societe Generale"
                 post="Web Dev"
                 ent="Societe Generale"
                 time="Aug 2019 - Jul 2020"
+                tasks={Experiences[1].tasks}
+                intro={Experiences[1].intro}
+                ItStack={Experiences[1].ItStack}
               />
-              <WorkExp logo="Saham.png" logoName="Saham" post="Web Dev" ent="Saham Group" time="Aug 2018 - Jun 2020" />
+              <WorkExp
+                logo="Saham.png"
+                logoName="Saham"
+                post="Web Dev"
+                ent="Saham Group"
+                time="Aug 2018 - Jun 2020"
+                tasks={Experiences[2].tasks}
+                intro={Experiences[2].intro}
+                ItStack={Experiences[2].ItStack}
+              />
               <WorkExp
                 logo="Maltem.png"
                 logoName="Maltem"
                 post="Consultant"
                 ent="Maltem Africa"
                 time="May 2018 - present"
+                tasks={Experiences[3].tasks}
+                intro={Experiences[3].intro}
+                ItStack={Experiences[3].ItStack}
               />
               <WorkExp
                 logo="uf.jpg"
@@ -113,6 +163,9 @@ const About = () => {
                 post="Web Dev"
                 ent="Urban Fusion"
                 time="Mar 2017 - Apr 2018"
+                tasks={Experiences[4].tasks}
+                intro={Experiences[4].intro}
+                ItStack={Experiences[4].ItStack}
               />
             </Box>
           </Flex>
