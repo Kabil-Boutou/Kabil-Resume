@@ -14,7 +14,7 @@ const theme = {
   },
   fontColors: {
     light: 'gray.700',
-    dark: 'gray.400',
+    dark: 'silver',
   },
   icons: {
     ...chakraTheme.icons,
