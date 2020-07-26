@@ -18,6 +18,7 @@ import {
 import Container from 'components/Container'
 import Feature from 'components/HalfContent'
 import WorkExp from 'components/WorkExp'
+import { useStateValue } from 'context/GlobalContext'
 
 const url = `${process.env.url}/about`
 const title = 'About Me – Kabil Boutou'
@@ -48,6 +49,7 @@ const Experiences = [
   },
 ]
 const About = () => {
+  const [state] = useStateValue()
   const { colorMode } = useColorMode()
   const theme = useTheme()
 
@@ -117,26 +119,31 @@ const About = () => {
               <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign="center">
                 Work Experience
               </Heading>
-              <WorkExp
-                logo="Eqdom.png"
-                logoName="Eqdom"
-                post="Full Stack"
-                ent="Eqdom"
-                time="Jul 2020 - present"
-                tasks={Experiences[0].tasks}
-                intro={Experiences[0].intro}
-                ItStack={Experiences[0].ItStack}
-              />
-              <WorkExp
+              {state.lang_content.workExp.map((we, key) => {
+                return (
+                  <WorkExp
+                    inc={we.inc}
+                    logo={we.logo}
+                    logoAlt={we.logoAlt}
+                    post={we.post}
+                    period={we.period}
+                    intro={we.intro}
+                    tasks={we.tasks}
+                    stack={we.stack}
+                  />
+                )
+              })}
+              {/*     <WorkExp
                 logo="sg.png"
-                logoName="Societe Generale"
+                logoAlt="Societe Generale"
                 post="Web Dev"
-                ent="Societe Generale"
-                time="Aug 2019 - Jul 2020"
+                inc="Societe Generale"
+                period="Aug 2019 - Jul 2020"
                 tasks={Experiences[1].tasks}
                 intro={Experiences[1].intro}
-                ItStack={Experiences[1].ItStack}
-              />
+                stack={Experiences[1].ItStack}
+              /> */}
+              {/* 
               <WorkExp
                 logo="Saham.png"
                 logoName="Saham"
@@ -166,7 +173,7 @@ const About = () => {
                 tasks={Experiences[4].tasks}
                 intro={Experiences[4].intro}
                 ItStack={Experiences[4].ItStack}
-              />
+              /> */}
             </Box>
           </Flex>
         </Stack>

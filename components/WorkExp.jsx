@@ -13,24 +13,22 @@ import {
   ListIcon,
 } from '@chakra-ui/core'
 
-export default function WorkExp({ logoName, logo, post, ent, time, intro, tasks, ItStack }) {
+export default function WorkExp({ logoAlt, logo, post, inc, period, intro, tasks, stack }) {
   const { colorMode } = useColorMode()
   const theme = useTheme()
   return (
     <Box>
       <Flex>
-        <Avatar name={logoName} src={`/assets/inc/${logo}`} color="tomato" size="sm" />
+        <Avatar name={logoAlt} src={`/assets/inc/${logo}`} color="tomato" size="sm" />
         <Text fontSize="xl" ml="2" color={theme.fontColors[colorMode]}>
-          <span>{ent}</span>
+          <span>{inc}</span>
         </Text>
       </Flex>
       <Flex m="2">
         <span>{post}</span>
-        {/*  <Divider orientation="vertical" />
-         */}
         <Divider borderColor="tomato" orientation="vertical" />
         <span>
-          <Text color="tomato">{time}</Text>
+          <Text color="tomato">{period}</Text>
         </span>
       </Flex>
 
@@ -38,22 +36,23 @@ export default function WorkExp({ logoName, logo, post, ent, time, intro, tasks,
         <Icon name="chevron-right" color="tomato" /> {intro}
       </Text>
 
-      <Text color={theme.fontColors[colorMode]} mb={4}>
-        <List>
-          {tasks &&
-            tasks.map((task, key) => {
-              return (
-                <ListItem key={key}>
-                  <ListIcon icon="chevron-right" color="tomato" />
-                  {task}
-                </ListItem>
-              )
-            })}
-        </List>
-      </Text>
+      <List color={theme.fontColors[colorMode]} mb={4}>
+        {tasks &&
+          tasks.map((task, key) => {
+            return (
+              <ListItem key={key}>
+                <ListIcon icon="chevron-right" color="tomato" />
+                {task}
+              </ListItem>
+            )
+          })}
+      </List>
       <Box mb={4}>
         <Text color="tomato">Technology stack :</Text>
-        <Text color={theme.fontColors[colorMode]}>{ItStack}</Text>
+        <Text color={theme.fontColors[colorMode]}>
+          <Icon name="chevron-right" color={colorMode} />
+          {stack}
+        </Text>
       </Box>
     </Box>
   )

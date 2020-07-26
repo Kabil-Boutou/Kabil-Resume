@@ -1,14 +1,20 @@
 import React from 'react'
 import App from 'next/app'
+
+import { StateProvider } from 'context/GlobalContext'
+import GlobalReducer from 'context/GlobalReducer'
+import { InitialGlobalReducer } from 'utils/consts'
 import Layout from 'components/Layout'
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <StateProvider reducer={GlobalReducer} initialState={InitialGlobalReducer}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </StateProvider>
     )
   }
 }
