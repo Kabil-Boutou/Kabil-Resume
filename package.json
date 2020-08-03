@@ -19,6 +19,7 @@
         "dotenv": "latest",
         "emotion-theming": "^10.0.27",
         "express": "latest",
+        "framer-motion": "^2.3.0",
         "next": "latest",
         "next-i18next": "latest",
         "next-seo": "^4.7.3",
