@@ -129,9 +129,11 @@ const About = () => {
             </Box>
           </Flex>
         </Stack>
-        <Box textAlign="center">
-          <Slider />
-        </Box>
+        <Stack spacing={8} justifyContent="center" alignItems="center" maxWidth="700px">
+          <Flex justifyContent="center" alignItems="center" maxWidth="700px">
+            <Slider />
+          </Flex>
+        </Stack>
         <Stack isInline spacing={8} align="center" m="0 auto 4rem auto" maxWidth="700px">
           <Feature title="Plan Money" desc="The future can be even brighter but a goal without a plan is just a wish" />
           <Feature

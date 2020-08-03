@@ -24,7 +24,9 @@
         "next-i18next": "latest",
         "next-seo": "^4.7.3",
         "react": "latest",
+        "react-awesome-slider": "^4.1.0",
         "react-dom": "latest",
+        "sass": "^1.26.10",
         "styled-components": "latest"
     },
     "devDependencies": {
