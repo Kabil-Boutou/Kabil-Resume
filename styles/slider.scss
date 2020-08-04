@@ -13,15 +13,57 @@
     }
     &.aws-sld--moveLeft {
       transform-origin: 100% 50%;
-      animation: foldLeft var(--slider-transition-duration) both
-        var(--transition-bezier);
+      animation: foldLeft var(--slider-transition-duration) both var(--transition-bezier);
     }
     &.aws-sld--moveRight {
       transform-origin: 0% 50%;
-      animation: foldRight var(--slider-transition-duration) both
-        var(--transition-bezier);
+      animation: foldRight var(--slider-transition-duration) both var(--transition-bezier);
     }
   }
+}
+.awssld {
+  --organic-arrow-thickness: 2px;
+  --organic-bullet-thickness: 2px;
+  --organic-arrow-height: 20px;
+  --slider-height-percentage: 60%;
+  --loader-bar-height: 6px;
+  --control-button-width: 5%;
+  --control-button-height: 25%;
+  --control-button-opacity: 0.5;
+  --control-button-hover-opacity: 0.75;
+  --control-button-background: transparent;
+  --transition-bezier: cubic-bezier(0.5, 0.075, 0.25, 0.95);
+  --slider-transition-duration: 575ms;
+  --organic-arrow-color: silver;
+  --organic-arrow-border-radius: 0;
+  --control-bullet-color: silver;
+  --control-bullet-active-color: tomato;
+  --content-background-color: rgba(0, 0, 0, 0);
+}
+.awssld__timer {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+}
+
+.awssld__bullets button {
+  padding: 0;
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin: 7px;
+  border-radius: 50%;
+  background: #292929;
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45), background-color 0.175s ease-out;
+}
+
+.awssld__content {
+  text-align: center;
+  align-items: initial;
+  padding-top: 5%;
 }
 
 @keyframes foldLeft {
@@ -29,8 +71,7 @@
     transform: translate3d(0, 0, 0) rotateY(0deg);
   }
   to {
-    transform: translate3d(-100%, 0, 0)
-      rotateY(calc(var(--fold-out-angle) * -1));
+    transform: translate3d(-100%, 0, 0) rotateY(calc(var(--fold-out-angle) * -1));
   }
 }
 
@@ -41,3 +82,9 @@
   to {
     transform: translate3d(100%, 0, 0) rotateY(var(--fold-out-angle));
   }
+}
+
+.awsome-slider {
+  height: 270px;
+  max-width: 700px;
+}

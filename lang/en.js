@@ -67,4 +67,24 @@ export default {
         ' NodeJS, ExpressJS, HandelbarsJS, ReactJS, Redux, FireBase, PasportJS, REST API, KeystoneJS, SocketIO, PayPal API, JQuery, MongoDB, Mongoose, Slack, BitBucket.',
     },
   ],
+  quotes: [
+    {
+      name: 'Dan Abramov',
+      avtar: 'https://bit.ly/dan-abramov',
+      position: 'CEO, Maltem Africa',
+      quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
+    },
+    {
+      name: 'Kent C.Dodds',
+      avtar: 'https://bit.ly/kent-c-dodds',
+      position: 'CEO, Maltem Africa',
+      quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
+    },
+    {
+      name: 'Ryan Florenece',
+      avtar: 'https://bit.ly/ryan-florence',
+      position: 'CEO, Maltem Africa',
+      quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
+    },
+  ],
 }

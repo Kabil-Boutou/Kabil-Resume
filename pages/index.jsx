@@ -45,7 +45,7 @@ const About = () => {
           spacing={8}
           justifyContent="center"
           alignItems="flex-start"
-          m="0 auto 4rem auto"
+          m="0 auto 2rem auto"
           maxWidth="700px"
           border={1}
         >
@@ -129,15 +129,15 @@ const About = () => {
             </Box>
           </Flex>
         </Stack>
-        <Stack spacing={8} justifyContent="center" alignItems="center" maxWidth="700px">
-          <Flex justifyContent="center" alignItems="center" maxWidth="700px">
+        <Stack>
+          <Flex justifyContent="center" flexDirection="column" alignItems="center">
             <Slider />
           </Flex>
         </Stack>
-        <Stack isInline spacing={8} align="center" m="0 auto 4rem auto" maxWidth="700px">
-          <Feature title="Plan Money" desc="The future can be even brighter but a goal without a plan is just a wish" />
+        <Stack isInline spacing={8} align="center" m="4rem auto 4rem auto" maxWidth="700px">
+          <Feature title="Why me " desc="The future can be even brighter but a goal without a plan is just a wish" />
           <Feature
-            title="Save Money"
+            title="Fun time"
             desc="You deserve good things. With a whooping 10-15% interest rate per annum, grow your savings."
           />
         </Stack>

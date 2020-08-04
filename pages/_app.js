@@ -6,6 +6,7 @@ import GlobalReducer from 'context/GlobalReducer'
 import { InitialGlobalReducer } from 'utils/consts'
 import Layout from 'components/Layout'
 import 'react-awesome-slider/dist/styles.css'
+import 'styles/slider.scss'
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props

@@ -1,5 +1,4 @@
 import React from 'react'
-import NextLink from 'next/link'
 import { Button, Box, IconButton, useColorMode, Flex } from '@chakra-ui/core'
 import styled from '@emotion/styled'
 
@@ -52,7 +51,10 @@ export default function Header() {
         </Button>
       </Box>
       <Box>
-        <NextLink href="/dashboard" passHref>
+        <Button leftIcon="download" size="md" width="150px" border="1px" borderColor="tomato">
+          Download
+        </Button>
+        {/*    <NextLink href="/dashboard" passHref>
           <Button as="a" variant="ghost" p={[1, 4]}>
             Dashboard
           </Button>
@@ -71,7 +73,7 @@ export default function Header() {
           <Button as="a" variant="ghost" p={[1, 4]}>
             Home
           </Button>
-        </NextLink>
+        </NextLink> */}
       </Box>
     </StickyNav>
   )
