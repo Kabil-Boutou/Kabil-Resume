@@ -70,21 +70,55 @@ export default {
   quotes: [
     {
       name: 'Dan Abramov',
-      avtar: 'https://bit.ly/dan-abramov',
+      linkedin: 'https://www.linkedin.com/',
+      avatar: 'https://bit.ly/dan-abramov',
       position: 'CEO, Maltem Africa',
       quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
     },
     {
       name: 'Kent C.Dodds',
-      avtar: 'https://bit.ly/kent-c-dodds',
+      linkedin: 'https://www.linkedin.com/',
+      avatar: 'https://bit.ly/kent-c-dodds',
       position: 'CEO, Maltem Africa',
       quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
     },
     {
       name: 'Ryan Florenece',
-      avtar: 'https://bit.ly/ryan-florence',
+      linkedin: 'https://www.linkedin.com/',
+      avatar: 'https://bit.ly/ryan-florence',
       position: 'CEO, Maltem Africa',
       quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
     },
   ],
+  domaines: {
+    title: 'Domaines',
+    items: [
+      'Distribution channel (ERP)',
+      'Staff management (ERP)',
+      'Production Industry',
+      'E-commerce',
+      'Advertising',
+      'Insurance',
+      'E-Banking',
+      'Services',
+    ],
+  },
+  skills: {
+    title: 'Skills',
+    items: [
+      'Next.Js, React.Js, Apollo client, Prisma2',
+      'Node.Js, Express.Js, KnexJs, GraphQL',
+      'PostgreSQL, MonogoDB, Firebase',
+      'Vercel, AWS, DigitalOcean',
+      'WordPress, Strapi',
+      'PM2, Nginx',
+      'Git, Trello, Jira',
+      'Scrum / Kanban Framework',
+    ],
+  },
+  intro: {
+    title: 'Introduction',
+    desc:
+      'Evolving my decision-making skills has always been one of my ultimate goals, I always seek for learning from more experienced people and share my humbled knowledge with the ones whom needs it.',
+  },
 }

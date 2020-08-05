@@ -1,18 +1,22 @@
 import React from 'react'
-import { Box, Avatar, Text } from '@chakra-ui/core'
+import { Avatar, Text, Icon, Link } from '@chakra-ui/core'
 
-export default function Quote() {
+export default function Quote({ name, linkedin, avatar, position, quote }) {
   return (
-    <Box textAlign="justify">
-      <Avatar size="lg" name="Olivier Bronzini" src="https://bit.ly/kent-c-dodds" />
-      <Text fontSize="2xs">Olivier Bronzini</Text>
+    <>
+      <Avatar size="lg" name={name} src={avatar} />
+      <Text fontSize="2xs">
+        {name}
+        <Link href={linkedin} ml={1} isExternal>
+          <Icon name="external-link" mx="2px" />
+        </Link>
+      </Text>
       <Text fontSize="xs" fontWeight={100} mb={3} color="tomato">
-        {' '}
-        CEO, Maltem Africa
+        {position}
       </Text>
       <Text as="blockquote" fontStyle="italic" maxW={400} fontWeight={300}>
-        In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.
+        {quote}
       </Text>
-    </Box>
+    </>
   )
 }

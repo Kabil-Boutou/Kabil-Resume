@@ -3,9 +3,12 @@ import Head from 'next/head'
 const Meta = (props) => (
   <Head>
     <title>Kabil Boutou</title>
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="Kabil Boutou protfilio made with Next.Js and Chakra UI, Special to all whom helped me with this mini personal project"
+    />
     <meta property="og:type" content="website" />
-    <meta name="og:title" property="og:title" content="" />
+    <meta name="og:title" property="og:title" content="Protroflio CV" />
     <meta name="og:description" property="og:description" content="" />
     <meta property="og:site_name" content="" />
     <meta property="og:url" content="" />
