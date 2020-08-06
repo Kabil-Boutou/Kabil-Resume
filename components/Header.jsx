@@ -1,14 +1,9 @@
 import React from 'react'
-import { Button, Box, IconButton, useColorMode, Flex } from '@chakra-ui/core'
+import { Button, Box, IconButton, useColorMode, Flex, Link } from '@chakra-ui/core'
 import styled from '@emotion/styled'
 
-import { upperFirstLetter } from 'utils'
-import { CHANGE_LANG } from 'utils/consts'
-import { useStateValue } from 'context/GlobalContext'
-
 export default function Header() {
-  const { toggleColorMode, colorMode } = useColorMode()
-  const [state, dispatch] = useStateValue()
+  const { colorMode } = useColorMode()
 
   const StickyNav = styled(Flex)`
     position: sticky;
@@ -17,10 +12,6 @@ export default function Header() {
     backdrop-filter: saturate(180%) blur(20px);
     transition: background-color 0.1 ease-in-out;
   `
-  const switchLang = () => {
-    if (state.lang === 'fr') dispatch({ type: CHANGE_LANG, lang: 'en' })
-    else dispatch({ type: CHANGE_LANG, lang: 'fr' })
-  }
   const navBgColor = {
     light: 'rgba(255, 255, 255, 0.8)',
     dark: 'rgba(0, Ø, 0, 0.8)',
@@ -40,15 +31,18 @@ export default function Header() {
       mx="auto"
     >
       <Box>
-        <IconButton
-          aria-label="Toggle dark mode"
-          icon={colorMode === 'dark' ? 'sun' : 'moon'}
-          onClick={toggleColorMode}
-          mr={3}
-        />
-        <Button aria-label="Switch langue" onClick={switchLang} w={4}>
-          {upperFirstLetter(state.lang)}
-        </Button>
+        <Link href="https://github.com/Kabil-Boutou" title="GitHub" isExternal>
+          <IconButton aria-label="GitHub" icon="github" size="lg" color="gray.500" variant="ghost" />
+        </Link>
+        <Link href="https://www.linkedin.com/in/kabil-boutou-8682bb129/" title="LinkedIn" isExternal>
+          <IconButton aria-label="LinkedIn" icon="linkedin" size="lg" color="gray.500" variant="ghost" />
+        </Link>
+        <Link href="mailto:me@kboutou.io" title="Email">
+          <IconButton aria-label="Email" icon="mail" size="lg" color="gray.500" variant="ghost" />
+        </Link>
+        <Link href="tel:(+212)694409596" title="Email">
+          <IconButton aria-label="Phone" icon="phone" color="gray.500" variant="ghost" />
+        </Link>
       </Box>
       <Box>
         <Button leftIcon="download" size="md" width="150px" border="1px" borderColor="tomato">

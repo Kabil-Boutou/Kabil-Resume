@@ -4,7 +4,7 @@ import { Avatar, Text, Icon, Link } from '@chakra-ui/core'
 export default function Quote({ name, linkedin, avatar, position, quote }) {
   return (
     <>
-      <Avatar size="lg" name={name} src={avatar} />
+      <Avatar size="lg" name={name} src={`/assets/people/${avatar}`} />
       <Text fontSize="2xs">
         {name}
         <Link href={linkedin} ml={1} isExternal>

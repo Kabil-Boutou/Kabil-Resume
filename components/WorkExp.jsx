@@ -17,7 +17,7 @@ export default function WorkExp({ logoAlt, logo, post, inc, period, intro, tasks
   const { colorMode } = useColorMode()
   const theme = useTheme()
   return (
-    <Box>
+    <Box textAlign="justify">
       <Flex>
         <Avatar name={logoAlt} src={`/assets/inc/${logo}`} color="tomato" size="sm" />
         <Text fontSize="xl" ml="2" color={theme.fontColors[colorMode]}>
@@ -32,11 +32,11 @@ export default function WorkExp({ logoAlt, logo, post, inc, period, intro, tasks
         </span>
       </Flex>
 
-      <Text color={theme.fontColors[colorMode]} mb={4}>
+      <Text color={theme.fontColors[colorMode]} mb={2}>
         <Icon name="chevron-right" color="tomato" /> {intro}
       </Text>
 
-      <List color={theme.fontColors[colorMode]} mb={4}>
+      <List color={theme.fontColors[colorMode]} mb={2}>
         {tasks &&
           tasks.map((task, key) => {
             return (
@@ -48,9 +48,11 @@ export default function WorkExp({ logoAlt, logo, post, inc, period, intro, tasks
           })}
       </List>
       <Box mb={4}>
-        <Text color="tomato">Technology stack :</Text>
+        <Text color="tomato" mb={2}>
+          Technology stack :
+        </Text>
         <Text color={theme.fontColors[colorMode]}>
-          <Icon name="chevron-right" color={colorMode} />
+          <Icon name="chevron-right" color={colorMode} mr={1} />
           {stack}
         </Text>
       </Box>

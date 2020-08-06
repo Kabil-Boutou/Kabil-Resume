@@ -7,10 +7,9 @@ export default {
       post: 'Full Stack',
       period: 'Jul 2020 - present',
       intro:
-        "Développement de sites & applications web pour le compte des clients de l'agence, conception des systèmes (Automatisation des process de facturation et mise en place d'un intranet) Accompagnement de la direction dans le processus de recrutement technique et encadrement des stagiaires.",
+        'Release of the first Eqdom MVP (consumer credit) as part of the digitization and giving a new start to this organization which was founded in 1974. Lead the demonstrations, bring new proposals to the PO at each sprint planning and challenge the backend team',
       tasks: [],
-      stack:
-        ' NodeJS, ExpressJS, HandelbarsJS, ReactJS, Redux, FireBase, PasportJS, REST API, KeystoneJS, SocketIO, PayPal API, JQuery, MongoDB, Mongoose, Slack, BitBucket.',
+      stack: 'React.Js, Styled Components, React intl, Gitlab.',
     },
     {
       inc: 'Societe Generale',
@@ -19,16 +18,9 @@ export default {
       post: 'Web Dev',
       period: 'Aug 2019 - Jul 2020',
       intro:
-        "Développement de sites & applications web pour le compte des clients de l'agence, conception des systèmes (Automatisation des process de facturation et mise en place d'un intranet) Accompagnement de la direction dans le processus de recrutement technique et encadrement des stagiaires.",
-      tasks: [
-        'Analyze customer needs and expectations',
-        'Provide proposals in sprint planning',
-        'Establish a working method with the team',
-        'Design and realization of the solution in question',
-        'Animat demonstrations',
-      ],
-      stack:
-        ' NodeJS, ExpressJS, HandelbarsJS, ReactJS, Redux, FireBase, PasportJS, REST API, KeystoneJS, SocketIO, PayPal API, JQuery, MongoDB, Mongoose, Slack, BitBucket.',
+        'Developing the front-end with unit tests, coordinate with the back-end team and my colleagues to have a well structured product and under the standards of SG digital factory. Creating a mobile app for the managers to make communication between them and various subsidiaries easier.',
+      tasks: [],
+      stack: 'Node.Js, Express.Js, React.Js/Next.Js, React Native, Postgres, GitLab, Jira, Slack, Zoom.',
     },
     {
       inc: 'Saham Group',
@@ -37,10 +29,9 @@ export default {
       post: 'Web Dev',
       period: 'Aug 2018 - Jun 2019',
       intro:
-        "Création «from scratch» d'application web d'assurance auto et d'assurance voyage destinée au marché africain.                                                                                                                        Développement du Back-end d'application mobile d'assurance pour les particuliers. Les plateformes ont pour but de faciliter la vente des produits d'assurance et garantir le relais entre les différents partenaires (banques, agrégateurs de paiements...etc) ",
+        'Creating web application from scratch of car and travel insurance for the African market. Developing the Back-end of mobile app insurance dedicated to individuals. The platforms aim to facilitate the sale of insurance products and guarantee the relay between the different partners (banks, payment aggregators...etc.)',
       tasks: [],
-      stack:
-        ' NodeJS, ExpressJS, HandelbarsJS, ReactJS, Redux, FireBase, PasportJS, REST API, KeystoneJS, SocketIO, PayPal API, JQuery, MongoDB, Mongoose, Slack, BitBucket.',
+      stack: 'Node.Js, Express.Js, React.Js, Socket.IO, MongoDB, Mongoose,Trello, Slack, Github.',
     },
     {
       inc: 'Maltem Africa',
@@ -49,10 +40,9 @@ export default {
       post: 'Consultant',
       period: 'May 2018 - present',
       intro:
-        "Création «from scratch» d'application web d'assurance auto et d'assurance voyage destinée au marché africain.                                                                                                                        Développement du Back-end d'application mobile d'assurance pour les particuliers. Les plateformes ont pour but de faciliter la vente des produits d'assurance et garantir le relais entre les différents partenaires (banques, agrégateurs de paiements...etc) ",
+        'Finding solutions and challenging clients to bring the best of both of us, clients such as Banks, Insurances companies ... the main goal is to releas a high quility product without making it difficult to use for the finel users.',
       tasks: [],
-      stack:
-        ' NodeJS, ExpressJS, HandelbarsJS, ReactJS, Redux, FireBase, PasportJS, REST API, KeystoneJS, SocketIO, PayPal API, JQuery, MongoDB, Mongoose, Slack, BitBucket.',
+      stack: 'Node.Js, Express.Js, GraphQL, React.Js/Next.Js, Redux/Apollo, FireBase/Postgres, Trello, Github.',
     },
     {
       inc: 'Urban Fusion',
@@ -61,17 +51,17 @@ export default {
       post: 'Web Dev',
       period: 'Mar 2017 - Apr 2018',
       intro:
-        " Web sites development and deployment on behalf of the agency's clients, creat and adapt ERP modules such as accounting for clients bills and managing employes vecations. Recruting and helping interns.",
+        "Web sites development and deployment on behalf of the agency's clients, creat and adapt ERP modules such as accounting for clients bills and managing employes vecations. Recruting and helping interns.",
       tasks: [],
       stack:
-        ' NodeJS, ExpressJS, HandelbarsJS, ReactJS, Redux, FireBase, PasportJS, REST API, KeystoneJS, SocketIO, PayPal API, JQuery, MongoDB, Mongoose, Slack, BitBucket.',
+        'NodeJS, ExpressJS, HandelbarsJS, ReactJS, Redux, FireBase, PasportJS, REST API, KeystoneJS, SocketIO, PayPal API, JQuery, MongoDB, Mongoose, Slack, BitBucket.',
     },
   ],
   quotes: [
     {
-      name: 'Dan Abramov',
+      name: 'Olivier Bronzini',
       linkedin: 'https://www.linkedin.com/',
-      avatar: 'https://bit.ly/dan-abramov',
+      avatar: 'olivierB.jpg',
       position: 'CEO, Maltem Africa',
       quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
     },
