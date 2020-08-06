@@ -9,7 +9,7 @@ import { useStateValue } from 'context/GlobalContext'
 import _List from 'components/_List'
 import Paragraph from 'components/Paragraph'
 
-const url = `${process.env.url}/about`
+const url = `${process.env.url}`
 const title = 'About Me – Kabil Boutou'
 
 const About = () => {
@@ -40,14 +40,14 @@ const About = () => {
           alignItems="center"
           maxWidth="700px"
           borderWidth="1px"
-          p="2%"
+          p="2% 3%"
           borderRadius="10px"
         >
-          <Avatar mb={5} alignItems="flex-center" size="2xl" name="Kabil Boutou" src="https://bit.ly/sage-adebayo" />
+          <Avatar mb={5} alignItems="flex-center" size="2xl" name="Kabil Boutou" src="/assets/people/kabilB.jpg" />
 
           <Paragraph title={lang_content.intro.title} desc={lang_content.intro.desc} />
 
-          <SimpleGrid columns={2} spacing={10} mb={4}>
+          <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={10} mb={4} id="columns_print">
             <_List title={lang_content.domaines.title} items={lang_content.domaines.items} />
             <_List title={lang_content.skills.title} items={lang_content.skills.items} />
           </SimpleGrid>
@@ -75,18 +75,14 @@ const About = () => {
         </Flex>
       </Stack>
 
-      <Stack>
+      <Stack id="quotes">
         <Flex justifyContent="center" flexDirection="column" alignItems="center">
           <Slider />
         </Flex>
       </Stack>
 
-      <Stack isInline spacing={8} align="center" m="4rem auto 4rem auto" maxWidth="700px">
-        <Feature title="Why me " desc="The future can be even brighter but a goal without a plan is just a wish" />
-        <Feature
-          title="Fun time"
-          desc="You deserve good things. With a whooping 10-15% interest rate per annum, grow your savings."
-        />
+      <Stack id="others" isInline spacing={8} textAlign="justify" m="4rem auto 4rem auto" maxWidth="700px">
+        <Feature title={lang_content.about.title} desc={lang_content.about.desc} />
       </Stack>
     </>
   )

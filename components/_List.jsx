@@ -6,7 +6,7 @@ export default function _List({ title, items }) {
   const theme = useTheme()
 
   return (
-    <Box mb={4}>
+    <Box mb={4} className="print_bloc">
       <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign="center">
         {title}
       </Heading>

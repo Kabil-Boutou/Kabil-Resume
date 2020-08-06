@@ -1,11 +1,12 @@
 import React from 'react'
 import { ThemeProvider, ColorModeProvider } from '@chakra-ui/core'
+import dynamic from 'next/dynamic'
 
 import Meta from 'components/Meta'
-import Header from 'components/Header'
-import Footer from 'components/Footer'
 import GlobalTheme from 'styles/GlobalTheme'
 import GlobalStyle from 'styles/GlobalStyle'
+const Header = dynamic(() => import('components/Header'), { ssr: false })
+const Footer = dynamic(() => import('components/Footer'), { ssr: false })
 
 const Layout = ({ children }) => {
   return (

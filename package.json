@@ -20,7 +20,6 @@
     "emotion-theming": "^10.0.27",
     "express": "latest",
     "next": "latest",
-    "next-i18next": "latest",
     "next-seo": "^4.7.3",
     "react": "latest",
     "react-awesome-slider": "^4.1.0",

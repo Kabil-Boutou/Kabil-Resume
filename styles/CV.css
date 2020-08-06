@@ -1,0 +1,18 @@
+@media print {
+  html,
+  body {
+    /*color-adjust: exact;*/
+    /*  width: 210mm;
+    height: 297mm; */
+  }
+  #header,
+  #footer,
+  #quotes,
+  #others {
+    display: none;
+  }
+}
+@page {
+  size: 21cm 30.5cm;
+  /* change the margins as you want them to be. */
+}
