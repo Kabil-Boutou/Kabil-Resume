@@ -2,7 +2,7 @@ import React from 'react'
 import { NextSeo } from 'next-seo'
 import { Box, Heading, Flex, Stack, Avatar, SimpleGrid } from '@chakra-ui/core'
 
-import Feature from 'components/HalfContent'
+import FancyBox from 'components/FancyBox'
 import WorkExp from 'components/WorkExp'
 import Slider from 'components/Slider'
 import { useStateValue } from 'context/GlobalContext'
@@ -82,7 +82,7 @@ const About = () => {
       </Stack>
 
       <Stack id="others" isInline spacing={8} textAlign="justify" m="4rem auto 4rem auto" maxWidth="700px">
-        <Feature title={lang_content.about.title} desc={lang_content.about.desc} />
+        <FancyBox title={lang_content.about.title} desc={lang_content.about.desc} />
       </Stack>
     </>
   )

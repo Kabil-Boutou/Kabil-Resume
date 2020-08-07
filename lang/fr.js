@@ -1,4 +1,5 @@
 export default {
+  share: 'Partager',
   workExp: [
     {
       inc: 'Eqdom',

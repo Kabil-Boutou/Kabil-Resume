@@ -44,7 +44,7 @@ export default function Header() {
           <IconButton aria-label="Email" icon="mail" size="lg" color="gray.500" variant="ghost" />
         </Link>
         <Link href="tel:(+212)694409596" title="phone">
-          <IconButton aria-label="Phone" icon="phone" color="gray.500" variant="ghost" />
+          <IconButton aria-label="Phone" icon="phone" color="gray.500" variant="ghost" outline />
         </Link>
       </Box>
       <Box>

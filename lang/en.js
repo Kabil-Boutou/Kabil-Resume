@@ -1,4 +1,5 @@
 export default {
+  share: 'Share',
   workExp: [
     {
       inc: 'Eqdom',
@@ -112,8 +113,9 @@ export default {
       'Evolving my decision-making skills has always been one of my ultimate goals, I always seek for learning from more experienced people and share my humbled knowledge with the ones whom needs it.',
   },
   about: {
-    title: 'Choosing me is choosing...',
-    desc:
-      "My sens of humour, so don't worry about getting a good laugh with. I don't drink or smoke but it would be my pleasure to come as a wing man (Barny style). Am a good listener too and I think am not bad at giving advice either .",
+    title: 'Hiring me is also choosing...',
+    desc: `A good sense of humour, so we'll probably have a good laugh together. 
+      A pretty great listener and I've been told that I wasn't bad at giving advice...
+      I'm not a drinker nor a smoker, but I can be a good wingman (Barney style)!`,
   },
 }
