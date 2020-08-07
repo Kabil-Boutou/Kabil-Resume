@@ -1,13 +1,15 @@
 import React from 'react'
-import { Flex, IconButton, Button, useColorMode, Box } from '@chakra-ui/core'
+import { Flex, IconButton, Button, useColorMode, Box, useDisclosure } from '@chakra-ui/core'
 
 import { upperFirstLetter } from 'utils'
 import { useStateValue } from 'context/GlobalContext'
 import { CHANGE_LANG } from 'utils/consts'
-
+import ShareModal from 'components/ShareModal'
 const Footer = () => {
-  const { toggleColorMode, colorMode } = useColorMode()
   const [state, dispatch] = useStateValue()
+  const { toggleColorMode, colorMode } = useColorMode()
+  const { onOpen, isOpen, onClose } = useDisclosure()
+
   const switchLang = () => {
     if (state.lang === 'fr') dispatch({ type: CHANGE_LANG, lang: 'en' })
     else dispatch({ type: CHANGE_LANG, lang: 'fr' })
@@ -20,12 +22,14 @@ const Footer = () => {
           icon={colorMode === 'dark' ? 'sun' : 'moon'}
           onClick={toggleColorMode}
           mr={3}
+          variant="ghost"
         />
-        <Button aria-label="Switch langue" onClick={switchLang} w={4} mr={3}>
+        <Button aria-label="Switch langue" onClick={switchLang} w={4} mr={3} variant="ghost">
           {upperFirstLetter(state.lang)}
         </Button>
-        <IconButton aria-label="Sharing network" icon="share" onClick={toggleColorMode} />
+        <IconButton aria-label="Sharing network" icon="share" onClick={onOpen} variant="ghost" />
       </Box>
+      <ShareModal isOpen={isOpen} onClose={onClose} />
     </Flex>
   )
 }

@@ -112,8 +112,8 @@ export default {
       'Evolving my decision-making skills has always been one of my ultimate goals, I always seek for learning from more experienced people and share my humbled knowledge with the ones whom needs it.',
   },
   about: {
-    title: 'You will also benefit from...',
+    title: 'Choosing me is choosing...',
     desc:
-      "My sens of humour, so don't worry about getting a good laugh with. I don't drink or smoke but it would be my pleasure to come as a wing me man (Barny style). Am a good leasner too and I think am not bad at giving advice either so there is that .",
+      "My sens of humour, so don't worry about getting a good laugh with. I don't drink or smoke but it would be my pleasure to come as a wing man (Barny style). Am a good listener too and I think am not bad at giving advice either .",
   },
 }
