@@ -30,21 +30,21 @@ export default function ShareModal({ isOpen, onClose }) {
             <SimpleGrid columns={2} spacing={2} p={8} textAlign="justify">
               <Link
                 href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fsharingbuttons.io&amp;title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;source=http%3A%2F%2Fsharingbuttons.io"
-                title="GitHub"
+                title="Linkedin"
                 isExternal
               >
                 <IconButton aria-label="Linkedin" icon="linkedin" variant="ghost" maxW={30} />
               </Link>
               <Link
                 href="whatsapp://send?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.%20http%3A%2F%2Fsharingbuttons.io"
-                title="GitHub"
+                title="Whatsapp"
                 isExternal
               >
                 <IconButton aria-label="Whatsapp" icon="whatsapp" variant="ghost" maxW={30} />
               </Link>
               <Link
                 href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsharingbuttons.io"
-                title="GitHub"
+                title="Facebook"
                 isExternal
               >
                 <IconButton aria-label="Facebook" icon="facebook" variant="ghost" maxW={30} />

@@ -1,5 +1,7 @@
 export default {
   share: 'Share',
+  city: 'Morocco, Casablanca',
+  work_exp: 'Work Experience',
   workExp: [
     {
       inc: 'Eqdom',

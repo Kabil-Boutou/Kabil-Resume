@@ -1,6 +1,5 @@
 import React from 'react'
-import { NextSeo } from 'next-seo'
-import { Box, Heading, Flex, Stack, Avatar, SimpleGrid } from '@chakra-ui/core'
+import { Box, Heading, Flex, Stack, Avatar, SimpleGrid, Text } from '@chakra-ui/core'
 
 import FancyBox from 'components/FancyBox'
 import WorkExp from 'components/WorkExp'
@@ -10,21 +9,13 @@ import _List from 'components/_List'
 import Paragraph from 'components/Paragraph'
 
 const url = `${process.env.url}`
-const title = 'About Me – Kabil Boutou'
+const title = 'Kabil Boutou'
 
-const About = () => {
+const Index = () => {
   const [{ lang_content }] = useStateValue()
 
   return (
     <>
-      <NextSeo
-        title={title}
-        canonical={url}
-        openGraph={{
-          url,
-          title,
-        }}
-      />
       <Stack
         as="main"
         spacing={8}
@@ -40,10 +31,25 @@ const About = () => {
           alignItems="center"
           maxWidth="700px"
           borderWidth="1px"
-          p="2% 3%"
+          p="2% 2%"
           borderRadius="10px"
         >
-          <Avatar mb={5} alignItems="flex-center" size="2xl" name="Kabil Boutou" src="/assets/people/kabilB.jpg" />
+          <SimpleGrid columns={{ sm: 2, md: 2 }} spacingX={{ sm: 30, md: 40 }}>
+            <Avatar
+              mb={5}
+              alignItems="flex-center"
+              size="2xl"
+              name="Kabil Boutou"
+              src="/assets/people/kabilB.jpg"
+              style={{ filter: ' grayscale(100%)' }}
+            />
+            <Box>
+              <Text>Kabil Boutou</Text>
+              <Text>Kabil.Boutou@gmail.com</Text>
+              <Text>(+212)6-94-40-95-96</Text>
+              <Text>{lang_content.city}</Text>
+            </Box>
+          </SimpleGrid>
 
           <Paragraph title={lang_content.intro.title} desc={lang_content.intro.desc} />
 
@@ -54,7 +60,7 @@ const About = () => {
 
           <Box>
             <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign="center">
-              Work Experience
+              {lang_content.work_exp}
             </Heading>
             {lang_content.workExp.map((we, key) => {
               return (
@@ -88,4 +94,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Index

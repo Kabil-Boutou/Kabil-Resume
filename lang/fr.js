@@ -1,5 +1,7 @@
 export default {
   share: 'Partager',
+  city: 'Maroc, Casablanca',
+  work_exp: 'Experiences professionnelle',
   workExp: [
     {
       inc: 'Eqdom',
