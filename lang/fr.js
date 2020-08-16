@@ -116,8 +116,9 @@ export default {
       'Évoluer mes compétences informatiques et décisionnelles a toujours été l’un de mes objectifs ultimes, je cherche toujours à mettre en œuvre mes années d’expérience acquises et développé une personnalité capable de gérer des grandes équipes.',
   },
   about: {
-    title: 'You will also benefit from...',
-    desc:
-      "My sens of humour, so don't worry about getting a good laugh with. I don't drink or smoke but it would be my pleasure to come as a wing me man (Barny style). Am a good leasner too and I think am not bad at giving advice either so there is that .",
+    title: 'Mes qualities',
+    desc: `
+    À part ce que j'ai déjà mentionné en haut, j'ai aussi un bon sens de l'humour.
+    Je réponds toujours présent pour écouter au problème des autres et pour donner des conseils s'il me le demande.`,
   },
 }

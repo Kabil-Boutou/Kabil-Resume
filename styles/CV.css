@@ -1,10 +1,12 @@
 @media print {
+  /*
   html,
   body {
-    /*color-adjust: exact;*/
-    /*  width: 210mm;
-    height: 297mm; */
+    color-adjust: exact;
+    width: 210mm;
+    height: 297mm; 
   }
+  */
   #header,
   #footer,
   #quotes,

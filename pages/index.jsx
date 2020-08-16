@@ -8,9 +8,6 @@ import { useStateValue } from 'context/GlobalContext'
 import _List from 'components/_List'
 import Paragraph from 'components/Paragraph'
 
-const url = `${process.env.url}`
-const title = 'Kabil Boutou'
-
 const Index = () => {
   const [{ lang_content }] = useStateValue()
 

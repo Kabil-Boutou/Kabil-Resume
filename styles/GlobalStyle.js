@@ -13,7 +13,11 @@ export default function GlobalStyle({ children }) {
         styles={css`
           ${colorMode === 'light' ? LightTheme : DarkTheme};
           ::selection {
-            background-color: #47a3f3;
+            background-color: rgb(232, 21, 169);
+            color: #fefefe;
+          }
+          ::-moz-selection {
+            background-color: rgb(232, 21, 169);
             color: #fefefe;
           }
           html {
