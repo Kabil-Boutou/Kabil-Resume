@@ -9,7 +9,7 @@ import _List from 'components/_List'
 import Paragraph from 'components/Paragraph'
 import { FULL_NAME, EMAIL, PHONE } from 'utils/consts'
 
-const Index = () => {
+export default function Index() {
   const [{ lang_content }] = useStateValue()
 
   return (
@@ -91,5 +91,3 @@ const Index = () => {
     </>
   )
 }
-
-export default Index
