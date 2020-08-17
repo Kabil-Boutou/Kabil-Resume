@@ -5,3 +5,7 @@ export function upperFirstLetter(text) {
     throw new Error('No text provided')
   }
 }
+
+export function isMobileDevice() {
+  return typeof window.orientation !== 'undefined' || navigator.userAgent.indexOf('IEMobile') !== -1
+}

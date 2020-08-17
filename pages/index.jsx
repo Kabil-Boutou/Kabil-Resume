@@ -7,6 +7,7 @@ import Slider from 'components/Slider'
 import { useStateValue } from 'context/GlobalContext'
 import _List from 'components/_List'
 import Paragraph from 'components/Paragraph'
+import { FULL_NAME, EMAIL, PHONE } from 'utils/consts'
 
 const Index = () => {
   const [{ lang_content }] = useStateValue()
@@ -36,14 +37,14 @@ const Index = () => {
               mb={5}
               alignItems="flex-center"
               size="2xl"
-              name="Kabil Boutou"
+              name={FULL_NAME}
               src="/assets/people/kabilB.jpg"
               style={{ filter: ' grayscale(100%)' }}
             />
             <Box>
-              <Text>Kabil Boutou</Text>
-              <Text>Kabil.Boutou@gmail.com</Text>
-              <Text>(+212)6-94-40-95-96</Text>
+              <Text>{FULL_NAME}</Text>
+              <Text>{EMAIL}</Text>
+              <Text>{PHONE}</Text>
               <Text>{lang_content.city}</Text>
             </Box>
           </SimpleGrid>
