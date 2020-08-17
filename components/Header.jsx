@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, IconButton, useColorMode, Flex, Link, SimpleGrid } from '@chakra-ui/core'
 import styled from '@emotion/styled'
 
-import ScrollMeter from 'components/Scrollmter'
+import ScrollMeter from 'components/ScrollMeter'
 import { EMAIL, PHONE } from 'utils/consts'
 export default function Header() {
   const { colorMode } = useColorMode()
