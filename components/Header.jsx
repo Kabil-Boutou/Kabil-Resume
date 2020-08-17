@@ -47,7 +47,7 @@ export default function Header() {
           <IconButton aria-label="Phone" icon="phone" color="gray.500" variant="ghost" outline />
         </Link>
       </Box>
-      <SimpleGrid columns={2} spacing={{ md: 3, sm: 3 }}>
+      <SimpleGrid columns={2} spacing={3}>
         <IconButton aria-label="download" icon="download" color="tomato" onClick={() => window.print()} />
         <ScrollMeter />
         {/*    <NextLink href="/dashboard" passHref>
