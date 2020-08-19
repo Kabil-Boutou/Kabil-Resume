@@ -1,6 +1,7 @@
 export default {
   share: 'Partager',
   city: 'Maroc, Casablanca',
+  tech_stack: 'Technlogies utilisées',
   work_exp: 'Experiences professionnelle',
   workExp: [
     {

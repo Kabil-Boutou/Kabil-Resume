@@ -58,12 +58,6 @@ export default function ShareModal({ isOpen, onClose }) {
               </Link>
             </SimpleGrid>
           </ModalBody>
-
-          {/*   <ModalFooter>
-            <Button variantColor="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-          </ModalFooter> */}
         </ModalContent>
       </Modal>
     </>

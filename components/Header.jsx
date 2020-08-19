@@ -1,11 +1,29 @@
 import React from 'react'
-import { Box, IconButton, useColorMode, Flex, Link, SimpleGrid } from '@chakra-ui/core'
+import dynamic from 'next/dynamic'
+import {
+  Box,
+  IconButton,
+  useColorMode,
+  Flex,
+  Link,
+  SimpleGrid,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  useDisclosure,
+} from '@chakra-ui/core'
 import styled from '@emotion/styled'
 
 import ScrollMeter from 'components/ScrollMeter'
-import { EMAIL, PHONE } from 'utils/consts'
+import { EMAIL, PHONE, LINKEDIN, GITHUB } from 'utils/consts'
+
+const Resume = dynamic(() => import('components/Resume'), {
+  ssr: false,
+})
 export default function Header() {
   const { colorMode } = useColorMode()
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   const StickyNav = styled(Flex)`
     position: sticky;
@@ -18,6 +36,7 @@ export default function Header() {
     light: 'rgba(255, 255, 255, 0.8)',
     dark: 'rgba(0, Ø, 0, 0.8)',
   }
+
   return (
     <StickyNav
       flexDirection="row"
@@ -34,10 +53,10 @@ export default function Header() {
       id="header"
     >
       <Box>
-        <Link href="https://github.com/Kabil-Boutou" title="GitHub" isExternal>
+        <Link href={GITHUB} title="GitHub" isExternal>
           <IconButton aria-label="GitHub" icon="github" size="lg" color="gray.500" variant="ghost" />
         </Link>
-        <Link href="https://www.linkedin.com/in/kabil-boutou-8682bb129/" title="LinkedIn" isExternal>
+        <Link href={LINKEDIN} title="LinkedIn" isExternal>
           <IconButton aria-label="LinkedIn" icon="linkedin" size="lg" color="gray.500" variant="ghost" />
         </Link>
         <Link href={`mailto:${EMAIL}`} title="Email">
@@ -48,15 +67,17 @@ export default function Header() {
         </Link>
       </Box>
       <SimpleGrid columns={2} spacing={3}>
-        <IconButton aria-label="download" icon="download" color="tomato" onClick={() => window.print()} />
+        <IconButton aria-label="download" icon="download" color="tomato" onClick={onOpen} />
         <ScrollMeter />
-        {/*    <NextLink href="/dashboard" passHref>
-          <Button as="a" variant="ghost" p={[1, 4]}>
-            Dashboard
-          </Button>
-        </NextLink>
-     */}
       </SimpleGrid>
+      <Modal onClose={onClose} isOpen={isOpen} size="xl">
+        <ModalOverlay />
+        <ModalContent style={{ backgroundColor: 'transparent' }}>
+          <ModalBody>
+            <Resume />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </StickyNav>
   )
 }

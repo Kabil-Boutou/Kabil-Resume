@@ -6,9 +6,13 @@ import { FULL_NAME, EMAIL, PHONE } from 'utils/consts'
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    top: -10,
   },
   section: {
-    margin: 10,
+    marginTop: 5,
+    marginRight: 10,
+    marginLeft: 10,
+    marginBottom: 5,
     padding: 10,
     flexGrow: 1,
   },
@@ -30,11 +34,11 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
 })
-export default function Header({ city }) {
+export default function Header({ city, lang }) {
   return (
     <View style={styles.container}>
       <View style={styles.rsection}>
-        <Image style={styles.avatar} src="/assets/people/kabilB.jpg" />
+        <Image style={styles.avatar} src={`/assets/people/kabilB_${lang}.jpg`} />
       </View>
       <View style={styles.lsection}>
         <Text>{FULL_NAME}</Text>

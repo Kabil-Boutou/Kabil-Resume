@@ -1,6 +1,7 @@
 export default {
   share: 'Share',
   city: 'Morocco, Casablanca',
+  tech_stack: 'Technology stack',
   work_exp: 'Work Experience',
   workExp: [
     {

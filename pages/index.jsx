@@ -10,7 +10,7 @@ import Paragraph from 'components/Paragraph'
 import { FULL_NAME, EMAIL, PHONE } from 'utils/consts'
 
 export default function Index() {
-  const [{ lang_content }] = useStateValue()
+  const [{ lang, lang_content }] = useStateValue()
 
   return (
     <>
@@ -38,7 +38,7 @@ export default function Index() {
               alignItems="flex-center"
               size="2xl"
               name={FULL_NAME}
-              src="/assets/people/kabilB.jpg"
+              src={`/assets/people/kabilB_${lang}.jpg`}
               style={{ filter: ' grayscale(100%)' }}
             />
             <Box>

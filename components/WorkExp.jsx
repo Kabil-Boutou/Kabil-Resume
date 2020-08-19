@@ -13,9 +13,13 @@ import {
   ListIcon,
 } from '@chakra-ui/core'
 
+import { useStateValue } from 'context/GlobalContext'
+
 export default function WorkExp({ logoAlt, logo, post, inc, period, intro, tasks, stack }) {
+  const [{ lang_content }] = useStateValue()
   const { colorMode } = useColorMode()
   const theme = useTheme()
+
   return (
     <Box textAlign="justify">
       <Flex>
@@ -49,7 +53,7 @@ export default function WorkExp({ logoAlt, logo, post, inc, period, intro, tasks
       </List>
       <Box mb={4}>
         <Text color="tomato" mb={2}>
-          Technology stack :
+          {lang_content.tech_stack} :
         </Text>
         <Text color={theme.fontColors[colorMode]}>
           <Icon name="chevron-right" color={colorMode} mr={1} />

@@ -1,10 +1,10 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
-const Resume = dynamic(() => import('components/CV_PDF'), {
+
+const Resume = dynamic(() => import('components/Resume'), {
   ssr: false,
 })
-//import Resume from 'components/CV_PDF'
 
-export default function App() {
+export default function Resume_Modal() {
   return <Resume />
 }
