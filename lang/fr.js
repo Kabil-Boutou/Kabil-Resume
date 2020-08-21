@@ -33,7 +33,7 @@ export default {
       post: 'Développement Web',
       period: 'Août 2018 - Juin 2019',
       intro:
-        "Création «from scratch» d'une solution web assurance auto/voyage (B2C,B2B2C) pour le marché africain(UMOA). Développement du Back-end d'application mobile d'assurance pour les particuliers (B2C). Ces plateformes ont pour but de faciliter la vente des produits d'assurance et garantir le relais entre les différents partenaires (banques, agrégateurs de paiements...etc)",
+        "Création «from scratch» d'une solution web assurance auto/voyage (B2C,B2B2C) pour le marché africain(UEMOA). Développement du Back-end d'application mobile d'assurance pour les particuliers (B2C). Ces plateformes ont pour but de faciliter la vente des produits d'assurance et garantir le relais entre les différents partenaires (banques, agrégateurs de paiements...etc)",
       tasks: [],
       stack: 'Node.Js, Express.Js, React.Js, Socket.IO, MongoDB, Mongoose,Trello, Slack, Github.',
     },
