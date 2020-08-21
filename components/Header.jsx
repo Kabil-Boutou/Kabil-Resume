@@ -12,18 +12,30 @@ import {
   ModalContent,
   ModalBody,
   useDisclosure,
+  Button,
+  Text,
+  useTheme,
 } from '@chakra-ui/core'
 import styled from '@emotion/styled'
 
 import ScrollMeter from 'components/ScrollMeter'
-import { EMAIL, PHONE, LINKEDIN, GITHUB } from 'utils/consts'
+import { EMAIL, PHONE, LINKEDIN, GITHUB, CHANGE_LANG } from 'utils/consts'
+import { isMobileDevice } from 'utils'
+import { useStateValue } from 'context/GlobalContext'
 
 const Resume = dynamic(() => import('components/Resume'), {
   ssr: false,
 })
 export default function Header() {
+  const theme = useTheme()
   const { colorMode } = useColorMode()
+  const [state, dispatch] = useStateValue()
   const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const switchLang = () => {
+    if (state.lang === 'fr') dispatch({ type: CHANGE_LANG, lang: 'en', lang_visual: 'En/Fr' })
+    else dispatch({ type: CHANGE_LANG, lang: 'fr', lang_visual: 'Fr/En' })
+  }
 
   const StickyNav = styled(Flex)`
     position: sticky;
@@ -47,8 +59,6 @@ export default function Header() {
       bg={navBgColor[colorMode]}
       as="nav"
       p={8}
-      mt={[0, 8]}
-      mb={8}
       mx="auto"
       id="header"
     >
@@ -67,17 +77,36 @@ export default function Header() {
         </Link>
       </Box>
       <SimpleGrid columns={2} spacing={3}>
-        <IconButton aria-label="download" icon="download" color="tomato" onClick={onOpen} />
-        <ScrollMeter />
+        {window !== undefined && isMobileDevice() ? (
+          <>
+            <Button aria-label="Switch langue" onClick={switchLang} w={4} variant="ghost">
+              <Text color={theme.fontColors[colorMode]} fontSize="sm">
+                {state.lang_visual}
+              </Text>
+            </Button>
+            <ScrollMeter />
+          </>
+        ) : (
+          <>
+            <IconButton aria-label="download" icon="download" color="tomato" onClick={onOpen} />
+            <Button aria-label="Switch langue" onClick={switchLang} w={4} variant="ghost">
+              <Text color={theme.fontColors[colorMode]} fontSize="sm">
+                {state.lang_visual}
+              </Text>
+            </Button>
+          </>
+        )}
       </SimpleGrid>
-      <Modal onClose={onClose} isOpen={isOpen} size="xl">
-        <ModalOverlay />
-        <ModalContent style={{ backgroundColor: 'transparent' }}>
-          <ModalBody>
-            <Resume />
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+      {window !== undefined && !isMobileDevice() && (
+        <Modal onClose={onClose} isOpen={isOpen} size="xl">
+          <ModalOverlay />
+          <ModalContent style={{ backgroundColor: 'transparent' }}>
+            <ModalBody>
+              <Resume />
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      )}
     </StickyNav>
   )
 }
