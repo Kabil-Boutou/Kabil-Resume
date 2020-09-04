@@ -14,5 +14,6 @@ module.exports = withBundleAnalyzer({
   pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
   env: {
     url: process.env.DOMAIN,
+    soundCloudApi: process.env.SOUNDCLOUD_API,
   },
 })

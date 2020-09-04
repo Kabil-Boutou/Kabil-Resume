@@ -8,6 +8,7 @@ import { useStateValue } from 'context/GlobalContext'
 import _List from 'components/_List'
 import Paragraph from 'components/Paragraph'
 import { FULL_NAME, EMAIL, PHONE } from 'utils/consts'
+import SoundCloud from 'components/SoundCloud'
 
 export default function Index() {
   const [{ lang, lang_content }] = useStateValue()
@@ -88,6 +89,7 @@ export default function Index() {
       <Stack id="others" isInline spacing={8} textAlign="justify" m="4rem auto 4rem auto" maxWidth="700px">
         <FancyBox title={lang_content.about.title} desc={lang_content.about.desc} />
       </Stack>
+      <SoundCloud />
     </>
   )
 }
