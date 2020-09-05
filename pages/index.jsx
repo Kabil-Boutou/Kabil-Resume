@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, Flex, Stack, Avatar, SimpleGrid, Text } from '@chakra-ui/core'
+import { Box, Heading, Flex, Stack, Avatar, SimpleGrid, Text, useTheme, useColorMode } from '@chakra-ui/core'
 
 import FancyBox from 'components/FancyBox'
 import WorkExp from 'components/WorkExp'
@@ -11,6 +11,8 @@ import { FULL_NAME, EMAIL, PHONE } from 'utils/consts'
 import SoundCloud from 'components/SoundCloud'
 
 export default function Index() {
+  const theme = useTheme()
+  const { colorMode } = useColorMode()
   const [{ lang, lang_content }] = useStateValue()
 
   return (
@@ -39,8 +41,8 @@ export default function Index() {
               alignItems="flex-center"
               size="2xl"
               name={FULL_NAME}
-              src={`/assets/people/kabilB_${lang}.jpg`}
-              style={{ filter: ' grayscale(100%)' }}
+              src={`/assets/people/kabilB_${lang}.png`}
+              bg={theme.colors[colorMode]}
             />
             <Box>
               <Text>{FULL_NAME}</Text>

@@ -38,7 +38,7 @@ export default function Header({ city, lang }) {
   return (
     <View style={styles.container}>
       <View style={styles.rsection}>
-        <Image style={styles.avatar} src={`/assets/people/kabilB_${lang}.jpg`} />
+        <Image style={styles.avatar} src={`/assets/people/kabilB_${lang}.png`} />
       </View>
       <View style={styles.lsection}>
         <Text>{FULL_NAME}</Text>

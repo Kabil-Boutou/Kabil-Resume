@@ -44,9 +44,10 @@ export default function Header() {
     backdrop-filter: saturate(180%) blur(20px);
     transition: background-color 0.1 ease-in-out;
   `
-  const navBgColor = {
-    light: 'rgba(255, 255, 255, 0.8)',
-    dark: 'rgba(0, Ø, 0, 0.8)',
+  const iconProps = {
+    size: 'lg',
+    color: 'gray.500',
+    variant: 'ghost',
   }
 
   return (
@@ -56,7 +57,7 @@ export default function Header() {
       alignItems="center"
       maxWidth="770px"
       width="100%"
-      bg={navBgColor[colorMode]}
+      bg={theme.colors.navBgColor[colorMode]}
       as="nav"
       p={8}
       mx="auto"
@@ -64,16 +65,16 @@ export default function Header() {
     >
       <Box>
         <Link href={GITHUB} title="GitHub" isExternal>
-          <IconButton aria-label="GitHub" icon="github" size="lg" color="gray.500" variant="ghost" />
+          <IconButton aria-label="GitHub" icon="github" {...iconProps} />
         </Link>
         <Link href={LINKEDIN} title="LinkedIn" isExternal>
-          <IconButton aria-label="LinkedIn" icon="linkedin" size="lg" color="gray.500" variant="ghost" />
+          <IconButton aria-label="LinkedIn" icon="linkedin" {...iconProps} />
         </Link>
         <Link href={`mailto:${EMAIL}`} title="Email">
-          <IconButton aria-label="Email" icon="mail" size="lg" color="gray.500" variant="ghost" />
+          <IconButton aria-label="Email" icon="mail" {...iconProps} />
         </Link>
         <Link href={`tel:${PHONE}`} title="phone">
-          <IconButton aria-label="Phone" icon="phone" color="gray.500" variant="ghost" outline />
+          <IconButton aria-label="Phone" icon="number" {...iconProps} />
         </Link>
       </Box>
       <SimpleGrid columns={2} spacing={3}>

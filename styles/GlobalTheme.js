@@ -8,6 +8,15 @@ const theme = {
     ...chakraTheme.fonts,
     body: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
   },
+  colors: {
+    ...chakraTheme.colors,
+    light: '#fff',
+    dark: '#000',
+    navBgColor: {
+      light: 'rgba(255, 255, 255, 0.8)',
+      dark: 'rgba(0, Ø, 0, 0.8)',
+    },
+  },
   fontWeights: {
     normal: 400,
     medium: 600,
