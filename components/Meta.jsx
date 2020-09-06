@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import { useStateValue } from 'context/GlobalContext'
 
-const Meta = (props) => {
+const Meta = () => {
   const [{ lang_content }] = useStateValue()
   return (
     <Head>
@@ -14,20 +14,18 @@ const Meta = (props) => {
       <meta
         name="og:description"
         property="og:description"
-        content="Kabil Boutou developer (Node.js,React.js,Next.js....), made with Next.Js and Chakra UI, Special to all my friends whom helped me with it."
+        content="Kabil Boutou developer (Node.js,React.js,Next.js....). Made with Next.Js, Chakra UI and the help of my dear friends."
       />
       <meta property="og:site_name" content="kboutou" />
       <meta property="og:url" content="https://kboutou.io" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="Kabil Boutou – Developer." />
-      <meta name="twitter:description" content={props.desc} />
+      <meta name="twitter:description" content="There's nothing for you behind you. All that exists is what's ahead." />
       <meta name="twitter:site" content="@cobain_cain" />
       <meta name="twitter:creator" content="@cobain_cain" />
       <link rel="icon" type="image/png" href="favicon.ico" />
       <link rel="apple-touch-icon" href="favicon.ico" />
-      <meta property="og:image" content="seo_preview.png" />
-      <link rel="canonical" href="" />
-      <script type="text/javascript" src=""></script>
+      <meta property="og:image" content="/assets/logo.png" />
     </Head>
   )
 }

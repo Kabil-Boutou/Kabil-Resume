@@ -4,7 +4,6 @@ import {
   Box,
   IconButton,
   useColorMode,
-  Flex,
   Link,
   SimpleGrid,
   Modal,
@@ -16,9 +15,9 @@ import {
   Text,
   useTheme,
 } from '@chakra-ui/core'
-import styled from '@emotion/styled'
 
 import ScrollMeter from 'components/ScrollMeter'
+import { StickyNav, iconProps } from 'components/styles/header'
 import { EMAIL, PHONE, LINKEDIN, GITHUB, CHANGE_LANG } from 'utils/consts'
 import { isMobileDevice } from 'utils'
 import { useStateValue } from 'context/GlobalContext'
@@ -26,6 +25,7 @@ import { useStateValue } from 'context/GlobalContext'
 const Resume = dynamic(() => import('components/Resume'), {
   ssr: false,
 })
+
 export default function Header() {
   const theme = useTheme()
   const { colorMode } = useColorMode()
@@ -37,32 +37,18 @@ export default function Header() {
     else dispatch({ type: CHANGE_LANG, lang: 'fr', lang_visual: 'Fr/En' })
   }
 
-  const StickyNav = styled(Flex)`
-    position: sticky;
-    z-index: 10;
-    top: 0;
-    backdrop-filter: saturate(180%) blur(20px);
-    transition: background-color 0.1 ease-in-out;
-  `
-  const iconProps = {
-    size: 'lg',
-    color: 'gray.500',
-    variant: 'ghost',
+  const ButtonLangSwitch = () => {
+    return (
+      <Button aria-label="Switch langue" onClick={switchLang} w={4} variant="ghost">
+        <Text color={theme.fontColors[colorMode]} fontSize="sm">
+          {state.lang_visual}
+        </Text>
+      </Button>
+    )
   }
 
   return (
-    <StickyNav
-      flexDirection="row"
-      justifyContent="space-between"
-      alignItems="center"
-      maxWidth="770px"
-      width="100%"
-      bg={theme.colors.navBgColor[colorMode]}
-      as="nav"
-      p={8}
-      mx="auto"
-      id="header"
-    >
+    <StickyNav as="nav" bg={theme.colors.navBgColor[colorMode]} id="header">
       <Box>
         <Link href={GITHUB} title="GitHub" isExternal>
           <IconButton aria-label="GitHub" icon="github" {...iconProps} />
@@ -80,21 +66,13 @@ export default function Header() {
       <SimpleGrid columns={2} spacing={3}>
         {window !== undefined && isMobileDevice() ? (
           <>
-            <Button aria-label="Switch langue" onClick={switchLang} w={4} variant="ghost">
-              <Text color={theme.fontColors[colorMode]} fontSize="sm">
-                {state.lang_visual}
-              </Text>
-            </Button>
+            <ButtonLangSwitch />
             <ScrollMeter />
           </>
         ) : (
           <>
             <IconButton aria-label="download" icon="download" color="tomato" onClick={onOpen} />
-            <Button aria-label="Switch langue" onClick={switchLang} w={4} variant="ghost">
-              <Text color={theme.fontColors[colorMode]} fontSize="sm">
-                {state.lang_visual}
-              </Text>
-            </Button>
+            <ButtonLangSwitch />
           </>
         )}
       </SimpleGrid>

@@ -3,7 +3,7 @@ import { Flex, IconButton, useColorMode, Box, useDisclosure } from '@chakra-ui/c
 
 import ShareModal from 'components/ShareModal'
 
-const Footer = () => {
+export default function Footer() {
   const { toggleColorMode, colorMode } = useColorMode()
   const { onOpen, isOpen, onClose } = useDisclosure()
 
@@ -23,4 +23,3 @@ const Footer = () => {
     </Flex>
   )
 }
-export default Footer
