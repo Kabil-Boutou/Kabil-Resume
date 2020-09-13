@@ -28,7 +28,7 @@ const Meta = () => {
       <meta name="twitter:creator" content="@cobain_cain" />
       <link rel="icon" type="image/png" href="favicon.ico" />
       <link rel="apple-touch-icon" href="favicon.ico" />
-      <meta property="og:image" content="/assets/logo.png" />
+      <meta property="og:image" content="/static/logo.png" />
     </Head>
   )
 }

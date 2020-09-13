@@ -7,7 +7,7 @@ export default function Quote({ name, linkedin, avatar, position, quote }) {
       <Avatar size="lg" name={name} src={`/assets/people/${avatar}`} />
       <Text fontSize="2xs">
         {name}
-        <Link href={linkedin} ml={1} isExternal>
+        <Link href={linkedin} title={name} ml={1} isExternal>
           <Icon name="external-link" mx="2px" />
         </Link>
       </Text>
