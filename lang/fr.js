@@ -64,25 +64,19 @@ export default {
   quotes: [
     {
       name: 'Oliver BRONZINI',
-      linkedin: 'https://www.linkedin.com/',
+      linkedin: 'https://www.linkedin.com/in/olivier-bronzini-maltem/',
       avatar: 'olivierB.jpg',
       position: 'CEO, Maltem Africa',
       quote:
         'En plus de ses compétences technique, Kabil est une personne de confiance, engagé et impliqué dans son travail. ',
     },
     {
-      name: 'Kent C.Dodds',
-      linkedin: 'https://www.linkedin.com/',
-      avatar: 'https://bit.ly/kent-c-dodds',
-      position: 'CEO, Maltem Africa',
-      quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
-    },
-    {
-      name: 'Ryan Florenece',
-      linkedin: 'https://www.linkedin.com/',
-      avatar: 'https://bit.ly/ryan-florence',
-      position: 'CEO, Maltem Africa',
-      quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
+      name: 'Simon Vernay',
+      linkedin: 'https://www.linkedin.com/in/simon-vernay-6a413a84/',
+      avatar: 'simonV.jpeg',
+      position: 'PO & Chef de projet Marketing, Société Générale Maroc',
+      quote:
+        'J’ai eu l’occasion de collaborer avec Kabil BOUTOU au sein de la Digital Factory Société Générale Maroc. Kabil est très compétent, disponible, force de proposition en plus d’être pédagogue pour expliquer simplement un fonctionnement informatique technique et complexe',
     },
   ],
   domaines: {

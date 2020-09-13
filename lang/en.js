@@ -64,24 +64,18 @@ export default {
   quotes: [
     {
       name: 'Olivier Bronzini',
-      linkedin: 'https://www.linkedin.com/',
+      linkedin: 'https://www.linkedin.com/in/olivier-bronzini-maltem/',
       avatar: 'olivierB.jpg',
       position: 'CEO, Maltem Africa',
       quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
     },
     {
-      name: 'Kent C.Dodds',
-      linkedin: 'https://www.linkedin.com/',
-      avatar: 'https://bit.ly/kent-c-dodds',
-      position: 'CEO, Maltem Africa',
-      quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
-    },
-    {
-      name: 'Ryan Florenece',
-      linkedin: 'https://www.linkedin.com/',
-      avatar: 'https://bit.ly/ryan-florence',
-      position: 'CEO, Maltem Africa',
-      quote: 'In addition to his technical skills, Kabil is a trusted person, committed and engaged to his work.',
+      name: 'Simon Vernay',
+      linkedin: 'https://www.linkedin.com/in/simon-vernay-6a413a84/',
+      avatar: 'simonV.jpeg',
+      position: 'PO & Marketing project manager, Societe Generale Maroc',
+      quote:
+        'I had the opportunity to collaborate with Kabil BOUTOU in the Digital Factory Societe Generale Maroc. Kabil is very competent, available, and able to propose in addition to being a pedagogue to explain a technical and complex computer operation.',
     },
   ],
   domaines: {

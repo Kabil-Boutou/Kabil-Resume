@@ -17,10 +17,13 @@ const Meta = () => {
         content="Kabil Boutou developer (Node.js,React.js,Next.js....). Made with Next.Js, Chakra UI and the help of my dear friends."
       />
       <meta property="og:site_name" content="kboutou" />
-      <meta property="og:url" content="https://kboutou.io" />
+      <meta property="og:url" content="https://kboutou.me" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="Kabil Boutou – Developer." />
-      <meta name="twitter:description" content="There's nothing for you behind you. All that exists is what's ahead." />
+      <meta
+        name="twitter:description"
+        content="Kabil Boutou developer (Node.js,React.js,Next.js....). Made with Next.Js, Chakra UI and the help of my dear friends."
+      />
       <meta name="twitter:site" content="@cobain_cain" />
       <meta name="twitter:creator" content="@cobain_cain" />
       <link rel="icon" type="image/png" href="favicon.ico" />
