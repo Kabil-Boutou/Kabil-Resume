@@ -37,7 +37,7 @@ export default function ShareModal({ isOpen, onClose }) {
               >
                 <IconButton aria-label="Linkedin" icon="linkedin" variant="ghost" maxW={30} />
               </Link>
-              <Link href="https://twitter.com/home?status=https://www.kboutou.me" title="twitter" isExternal>
+              <Link href="https://twitter.com/intent/tweet?url=kboutou.me" title="twitter" isExternal>
                 <IconButton aria-label="Twitter" icon="twitter" variant="ghost" maxW={30} />
               </Link>
               <Link
