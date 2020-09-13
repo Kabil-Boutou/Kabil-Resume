@@ -11,49 +11,43 @@ import {
   SimpleGrid,
   Link,
   useColorMode,
+  useTheme,
 } from '@chakra-ui/core'
 import { useStateValue } from 'context/GlobalContext'
 
 export default function ShareModal({ isOpen, onClose }) {
   const [{ lang_content }] = useStateValue()
   const { colorMode } = useColorMode()
+  const theme = useTheme()
 
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose} size="xs" isCentered preserveScrollBarGap>
         <ModalOverlay />
-        <ModalContent bg={colorMode === 'dark' ? 'gray.900' : 'gray.300'} borderRadius={20} maxW={200}>
+        <ModalContent bg={theme.modal.bg[colorMode]} borderRadius={20} maxW={200}>
           <ModalHeader>{lang_content.share}</ModalHeader>
           <ModalCloseButton />
           <Divider />
           <ModalBody>
             <SimpleGrid columns={2} spacing={2} p={8} textAlign="justify">
               <Link
-                href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fsharingbuttons.io&amp;title=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;summary=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;source=http%3A%2F%2Fsharingbuttons.io"
+                href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.kboutou.ma&title=&summary=&source="
                 title="Linkedin"
                 isExternal
               >
                 <IconButton aria-label="Linkedin" icon="linkedin" variant="ghost" maxW={30} />
               </Link>
-              <Link
-                href="whatsapp://send?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.%20http%3A%2F%2Fsharingbuttons.io"
-                title="Whatsapp"
-                isExternal
-              >
-                <IconButton aria-label="Whatsapp" icon="whatsapp" variant="ghost" maxW={30} />
+              <Link href="https://twitter.com/home?status=https://www.kboutou.ma" title="twitter" isExternal>
+                <IconButton aria-label="Twitter" icon="twitter" variant="ghost" maxW={30} />
               </Link>
               <Link
-                href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsharingbuttons.io"
+                href="https://www.facebook.com/sharer/sharer.php?u=https://www.kboutou.ma"
                 title="Facebook"
                 isExternal
               >
                 <IconButton aria-label="Facebook" icon="facebook" variant="ghost" maxW={30} />
               </Link>
-              <Link
-                href="mailto:?subject=Kabil%20Boutou%20Portfolio.&amp;body=http%3A%2F%2Fsharingbuttons.io"
-                title="Mail"
-                isExternal
-              >
+              <Link href="mailto:info@example.com?&subject=&body=https://www.kboutou.ma" title="Mail" isExternal>
                 <IconButton aria-label="Email" icon="mail" variant="ghost" maxW={30} />
               </Link>
             </SimpleGrid>

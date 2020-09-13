@@ -26,6 +26,12 @@ const theme = {
     light: 'gray.700',
     dark: 'silver',
   },
+  modal: {
+    bg: {
+      light: 'gray.300',
+      dark: 'gray.900',
+    },
+  },
   icons: {
     ...chakraTheme.icons,
     ...customIcons,
