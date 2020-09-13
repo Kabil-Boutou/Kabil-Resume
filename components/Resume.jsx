@@ -1,95 +1,31 @@
 import React from 'react'
-import { Page, Text, View, Font, Document, StyleSheet, PDFViewer } from '@react-pdf/renderer'
+import { Page, Text, View, Document, StyleSheet, PDFViewer } from '@react-pdf/renderer'
 
 import { useStateValue } from 'context/GlobalContext'
+import { LangStyle } from 'components/resume/style'
 import Header from 'components/resume/Header'
 import List, { Item } from 'components/resume/List'
 import WorkExp from 'components/resume/WorkExp'
 import { FULL_NAME } from 'utils/consts'
 
-// Register font
-Font.register({ family: 'raleway', src: 'assets/fonts/Raleway.ttf' })
-Font.register({ family: 'ralewayBold', src: 'assets/fonts/RalewayBold.ttf' })
-
-const BaseStyle = {
-  preview: { height: '75vh', width: '100%' },
-  page: {
-    padding: 30,
-  },
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    '@media max-width: 400': {
-      flexDirection: 'column',
-    },
-    margin: 'auto',
-  },
-  /*  section: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1,
-  }, */
-  title: {
-    fontFamily: 'ralewayBold',
-    textAlign: 'center',
-    marginBottom: 10,
-  },
-  desc: {
-    fontFamily: 'raleway',
-    textAlign: 'justify',
-    marginBottom: 5,
-    fontSize: 13,
-  },
-  section: {
-    padding: 17,
-  },
-  grid: {
-    top: -10,
-    flex: 1,
-    flexDirection: 'row',
-    flexGrow: 1,
-    justifyContent: 'space-between',
-  },
-  maxWS: {
-    maxWidth: '50%',
-  },
-  mr: {
-    marginRight: 200,
-  },
-  list_title: {
-    fontFamily: 'ralewayBold',
-  },
-}
-const LangStyle = {
-  en: { ...BaseStyle },
-  fr: {
-    ...BaseStyle,
-    mr: {
-      marginRight: 130,
-    },
-    work_section: {
-      top: -25,
-    },
-  },
-}
-
 // Create Document Component
-export default function MyDocument() {
+export default function Resume() {
   const [{ lang, lang_content }] = useStateValue()
 
   // Create styles
   const styles = StyleSheet.create({
     ...LangStyle[lang],
   })
+
   return (
     <PDFViewer style={styles.preview}>
       <Document
         author={FULL_NAME}
         keywords="mobile, web, dev, front, back"
-        subject="The resume of Kabil Boutou"
+        subject={`The resume of ${FULL_NAME}`}
         title={`${FULL_NAME} CV`}
       >
-        <Page size="A4" style={styles.page}>
+        <Page size="A4" style={styles.page} wrap>
           <Header city={lang_content.city} lang={lang} />
           <View style={styles.section}>
             <Text style={styles.title}>{lang_content.intro.title}</Text>
