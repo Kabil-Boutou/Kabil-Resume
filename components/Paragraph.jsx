@@ -6,7 +6,7 @@ export default function Paragraph({ title, desc }) {
   const theme = useTheme()
 
   return (
-    <Box mb={4} textAlign="center">
+    <Box mb={4} textAlign={theme.titles.textAlign}>
       <Heading letterSpacing="tight" mb={2} as="h1" size="xl">
         {title}
       </Heading>

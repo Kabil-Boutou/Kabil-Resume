@@ -29,26 +29,26 @@ export default function ShareModal({ isOpen, onClose }) {
           <ModalCloseButton />
           <Divider />
           <ModalBody>
-            <SimpleGrid columns={2} spacing={2} p={8} textAlign="justify">
+            <SimpleGrid columns={2} spacing={2} p={5} textAlign="justify">
               <Link
                 href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.kboutou.me&title=&summary=&source="
                 title="Linkedin"
                 isExternal
               >
-                <IconButton aria-label="Linkedin" icon="linkedin" variant="ghost" maxW={30} />
+                <IconButton aria-label="Linkedin" icon="linkedin" variant="ghost" maxW={30} size="lg" />
               </Link>
               <Link href="https://twitter.com/intent/tweet?url=kboutou.me" title="twitter" isExternal>
-                <IconButton aria-label="Twitter" icon="twitter" variant="ghost" maxW={30} />
+                <IconButton aria-label="Twitter" icon="twitter" variant="ghost" maxW={30} size="lg" />
               </Link>
               <Link
                 href="https://www.facebook.com/sharer/sharer.php?u=https://www.kboutou.me"
                 title="Facebook"
                 isExternal
               >
-                <IconButton aria-label="Facebook" icon="facebook" variant="ghost" maxW={30} />
+                <IconButton aria-label="Facebook" icon="facebook" variant="ghost" maxW={30} size="lg" />
               </Link>
               <Link href="mailto:info@example.com?&subject=&body=https://www.kboutou.me" title="Mail" isExternal>
-                <IconButton aria-label="Email" icon="mail" variant="ghost" maxW={30} />
+                <IconButton aria-label="Email" icon="mail" variant="ghost" maxW={30} size="lg" />
               </Link>
             </SimpleGrid>
           </ModalBody>

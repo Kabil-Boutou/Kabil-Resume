@@ -35,7 +35,7 @@ export default function Index() {
           p="2% 2%"
           borderRadius="10px"
         >
-          <SimpleGrid columns={{ sm: 2, md: 2 }} spacingX={{ sm: 30, md: 40 }}>
+          <SimpleGrid columns={2} spacingX={{ sm: 30, md: 40 }}>
             <Avatar
               mb={5}
               alignItems="flex-center"
@@ -45,7 +45,7 @@ export default function Index() {
               bg={theme.colors[colorMode]}
             />
             <Box>
-              <Text>{FULL_NAME}</Text>
+              <Text fontWeight="bold">{FULL_NAME}</Text>
               <Text>{EMAIL}</Text>
               <Text>{PHONE}</Text>
               <Text>{lang_content.city}</Text>
@@ -60,7 +60,7 @@ export default function Index() {
           </SimpleGrid>
 
           <Box>
-            <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign="center">
+            <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign={theme.titles.textAlign}>
               {lang_content.work_exp}
             </Heading>
             {lang_content.workExp.map((we, key) => {

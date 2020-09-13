@@ -7,7 +7,7 @@ export default function _List({ title, items }) {
 
   return (
     <Box mb={4} className="print_bloc">
-      <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign="center">
+      <Heading letterSpacing="tight" mb={2} as="h1" size="xl" textAlign={theme.titles.textAlign}>
         {title}
       </Heading>
       <List styleType="disc" color={theme.fontColors[colorMode]}>

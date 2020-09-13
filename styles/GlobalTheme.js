@@ -36,6 +36,8 @@ const theme = {
     ...chakraTheme.icons,
     ...customIcons,
   },
+  titles: {
+    textAlign: 'left',
+  },
 }
-
 export default theme
