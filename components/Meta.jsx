@@ -26,7 +26,7 @@ const Meta = () => {
       />
       <meta name="twitter:site" content="@cobain_cain" />
       <meta name="twitter:creator" content="@cobain_cain" />
-      <meta property="twitter:image" content="https://kboutou.me/static/logo.png" />
+      <meta name="twitter:image" content="https://kboutou.me/static/logo.png" />
       <link rel="icon" type="image/png" href="favicon.ico" />
       <link rel="apple-touch-icon" href="favicon.ico" />
       <meta property="og:image" content="https://kboutou.me/static/logo.png" />
