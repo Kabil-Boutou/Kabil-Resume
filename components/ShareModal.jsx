@@ -31,23 +31,23 @@ export default function ShareModal({ isOpen, onClose }) {
           <ModalBody>
             <SimpleGrid columns={2} spacing={2} p={8} textAlign="justify">
               <Link
-                href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.kboutou.ma&title=&summary=&source="
+                href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.kboutou.me&title=&summary=&source="
                 title="Linkedin"
                 isExternal
               >
                 <IconButton aria-label="Linkedin" icon="linkedin" variant="ghost" maxW={30} />
               </Link>
-              <Link href="https://twitter.com/home?status=https://www.kboutou.ma" title="twitter" isExternal>
+              <Link href="https://twitter.com/home?status=https://www.kboutou.me" title="twitter" isExternal>
                 <IconButton aria-label="Twitter" icon="twitter" variant="ghost" maxW={30} />
               </Link>
               <Link
-                href="https://www.facebook.com/sharer/sharer.php?u=https://www.kboutou.ma"
+                href="https://www.facebook.com/sharer/sharer.php?u=https://www.kboutou.me"
                 title="Facebook"
                 isExternal
               >
                 <IconButton aria-label="Facebook" icon="facebook" variant="ghost" maxW={30} />
               </Link>
-              <Link href="mailto:info@example.com?&subject=&body=https://www.kboutou.ma" title="Mail" isExternal>
+              <Link href="mailto:info@example.com?&subject=&body=https://www.kboutou.me" title="Mail" isExternal>
                 <IconButton aria-label="Email" icon="mail" variant="ghost" maxW={30} />
               </Link>
             </SimpleGrid>
