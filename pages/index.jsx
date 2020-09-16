@@ -35,22 +35,20 @@ export default function Index() {
           p="2% 2%"
           borderRadius="10px"
         >
-          <SimpleGrid columns={2} spacingX={{ sm: 30, md: 40 }}>
+          <Box display="flex" justifyContent="space-between" w="100%" m="1rem">
             <Avatar
-              mb={5}
-              alignItems="flex-center"
               size="2xl"
               name={FULL_NAME}
               src={`/assets/people/kabilB_${lang}.png`}
               bg={theme.colors[colorMode]}
             />
-            <Box>
+            <Box m="auto 0">
               <Text fontWeight="bold">{FULL_NAME}</Text>
               <Text>{EMAIL}</Text>
               <Text>{PHONE}</Text>
               <Text>{lang_content.city}</Text>
             </Box>
-          </SimpleGrid>
+          </Box>
 
           <Paragraph title={lang_content.intro.title} desc={lang_content.intro.desc} />
 
