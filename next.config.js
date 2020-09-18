@@ -1,19 +1,8 @@
-const path = require('path')
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+const withCss = require('@zeit/next-css')
+const withSass = require('@zeit/next-sass')
+const withPurgeCss = require('next-purgecss')
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-module.exports = withBundleAnalyzer({
-  webpack: (config) => {
-    config.resolve.modules.push(path.resolve('./'))
-    return config
-  },
-  pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
-  env: {
-    url: process.env.DOMAIN,
-    soundCloudApi: process.env.SOUNDCLOUD_API,
-  },
-})
+module.exports = withCss(withSass(withPurgeCss()))
