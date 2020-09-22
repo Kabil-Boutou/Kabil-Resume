@@ -14,6 +14,8 @@ import {
   Button,
   Text,
   useTheme,
+  Spinner,
+  Flex,
 } from '@chakra-ui/core'
 
 import ScrollMeter from 'components/ScrollMeter'
@@ -24,6 +26,13 @@ import { useStateValue } from 'context/GlobalContext'
 
 const Resume = dynamic(() => import('components/Resume'), {
   ssr: false,
+  loading: function LoadingResume() {
+    return (
+      <Flex justifyContent="center" alignItems="center" h="100vh">
+        <Spinner color="tomato" />
+      </Flex>
+    )
+  },
 })
 
 export default function Header() {
