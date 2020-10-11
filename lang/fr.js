@@ -22,7 +22,7 @@ export default {
       post: 'Développement Web',
       period: 'Août 2019 - Juin 2020',
       intro:
-        "Réalisation du front avec les tester unitaire, coordonner avec les équipes client ainsi que mon équipe front pour avoir un produit structuré respectant les normes de la digitale factory Société Générale. Création d'un poc application mobile pour la direction générale assurant la facilité de communication entre les différentes filiales.",
+        "Réalisation du front avec les testes unitaire, coordonner avec les équipes client ainsi que mon équipe front pour avoir un produit structuré respectant les normes de la digitale factory Société Générale. Création d'un poc application mobile pour la direction générale assurant la facilité de communication entre les différentes filiales.",
       tasks: [],
       stack: 'Node.Js, Express.Js, React.Js/Next.Js, React Native, Postgres, GitLab, Jira, Slack, Zoom.',
     },
