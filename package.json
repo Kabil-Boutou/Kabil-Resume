@@ -31,8 +31,10 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "babel-eslint": "latest",
+    "commitizen": "^4.2.4",
     "cross-env": "latest",
     "cz-conventional-changelog": "3.1.0",
+    "cz-emoji": "^1.3.1",
     "eslint": "latest",
     "eslint-config-airbnb": "latest",
     "eslint-config-next": "^11.0.1",
@@ -43,12 +45,6 @@
     "husky": "^7.0.1",
     "lint-staged": "latest",
     "next-purgecss": "latest"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
   },
   "config": {
     "commitizen": {
