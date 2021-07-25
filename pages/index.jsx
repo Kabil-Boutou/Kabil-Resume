@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, Heading, Flex, Stack, Avatar, SimpleGrid, Text, useTheme, useColorMode } from '@chakra-ui/core'
+import { useRouter } from 'next/router'
+import { Box, Heading, Flex, Stack, Avatar, SimpleGrid, Text, useTheme, useColorMode } from '@chakra-ui/react'
 
 import FancyBox from 'components/FancyBox'
 import WorkExp from 'components/WorkExp'
@@ -13,6 +13,10 @@ import SoundCloud from 'components/SoundCloud'
 export default function Index() {
   const theme = useTheme()
   const { colorMode } = useColorMode()
+  const router = useRouter()
+  const { locale } = router
+  console.log('locale:', locale) //TODO: Change context to i18l builtin and switch with router.push('/','/',{locale})
+
   const [{ lang, lang_content }] = useStateValue()
 
   return (

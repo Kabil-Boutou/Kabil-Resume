@@ -17,7 +17,7 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/*.lock": true
+    "**/*.lock": false
   },
   "search.exclude": {
     "**/node_modules": true,

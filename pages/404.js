@@ -1,6 +1,5 @@
-import React from 'react'
 import NextLink from 'next/link'
-import { useColorMode, Heading, Text, Flex, Stack, Button } from '@chakra-ui/core'
+import { useColorMode, Heading, Text, Flex, Stack, Button } from '@chakra-ui/react'
 
 export default function Error() {
   const { colorMode } = useColorMode()
@@ -16,9 +15,9 @@ export default function Error() {
           <span style={{ color: 'tomato' }}>404</span> – How did I get here ?
         </Heading>
         <Text color={secondaryTextColor[colorMode]} my={4}>
-          Oh! Sneaky you, I see your looking for troubel there (Since it's just a one page website). It's good being
-          curious but you can go back to my one lonely page, and I will make sure that next time it will be a typo
-          mistake that brings you here.
+          Oh! Sneaky you, I see your looking for troubel there (Since it&apos;s just a one page website). It&apos;s good
+          thing being curious but you can go back to my one lonely page, and I will make sure that next time it will be
+          a typo mistake that brings you here.
         </Text>
         <NextLink href="/" passHref>
           <Button as="a" p={[1, 4]} w="250px" fontWeight="bold" m="3rem auto 0">

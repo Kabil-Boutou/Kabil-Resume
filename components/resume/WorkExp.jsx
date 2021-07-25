@@ -1,4 +1,3 @@
-import React from 'react'
 import { Text, View, Image } from '@react-pdf/renderer'
 
 import { WorkExpStyle } from 'components/resume/style'

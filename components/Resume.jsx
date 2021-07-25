@@ -1,4 +1,3 @@
-import React from 'react'
 import { Page, Text, View, Document, StyleSheet, PDFViewer } from '@react-pdf/renderer'
 
 import { useStateValue } from 'context/GlobalContext'

@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Box,
   Avatar,
@@ -11,7 +10,7 @@ import {
   List,
   ListItem,
   ListIcon,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
 
 import { useStateValue } from 'context/GlobalContext'
 

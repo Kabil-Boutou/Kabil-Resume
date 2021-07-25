@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Modal,
   ModalOverlay,
@@ -12,7 +11,7 @@ import {
   Link,
   useColorMode,
   useTheme,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
 import { useStateValue } from 'context/GlobalContext'
 
 export default function ShareModal({ isOpen, onClose }) {

@@ -1,5 +1,4 @@
-import React from 'react'
-import { Box, Heading, List, ListItem, useTheme, useColorMode } from '@chakra-ui/core'
+import { Box, Heading, List, ListItem, useTheme, useColorMode } from '@chakra-ui/react'
 
 export default function _List({ title, items }) {
   const { colorMode } = useColorMode()

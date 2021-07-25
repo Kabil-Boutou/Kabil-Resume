@@ -12,22 +12,18 @@
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
-    "@react-pdf/renderer": "^1.6.10",
+    "@chakra-ui/react": "^1.6.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@react-pdf/renderer": "latest",
     "axios": "latest",
     "dotenv": "latest",
-    "emotion-theming": "^10.0.27",
-    "express": "latest",
-    "framer-motion": "^2.4.2",
+    "framer-motion": "^4",
     "next": "latest",
-    "next-seo": "^4.7.3",
-    "node-sass": "^4.14.1",
+    "node-sass": "4",
     "react": "latest",
-    "react-awesome-slider": "^4.1.0",
-    "react-dom": "latest",
-    "styled-components": "latest"
+    "react-awesome-slider": "latest",
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "latest",
@@ -35,18 +31,18 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "babel-eslint": "latest",
-    "babel-plugin-styled-components": "latest",
     "cross-env": "latest",
     "cz-conventional-changelog": "3.1.0",
     "eslint": "latest",
     "eslint-config-airbnb": "latest",
+    "eslint-config-next": "^11.0.1",
     "eslint-plugin-import": "latest",
     "eslint-plugin-jsx-a11y": "latest",
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
-    "husky": "latest",
+    "husky": "^7.0.1",
     "lint-staged": "latest",
-    "next-purgecss": "^4.0.0"
+    "next-purgecss": "latest"
   },
   "husky": {
     "hooks": {

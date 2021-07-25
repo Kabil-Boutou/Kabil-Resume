@@ -1,4 +1,3 @@
-import React from 'react'
 import dynamic from 'next/dynamic'
 import {
   Box,
@@ -16,7 +15,7 @@ import {
   useTheme,
   Spinner,
   Flex,
-} from '@chakra-ui/core'
+} from '@chakra-ui/react'
 
 import ScrollMeter from 'components/ScrollMeter'
 import { StickyNav, iconProps } from 'components/styles/header'

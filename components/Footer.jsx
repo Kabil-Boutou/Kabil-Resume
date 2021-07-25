@@ -1,5 +1,4 @@
-import React from 'react'
-import { Flex, IconButton, useColorMode, Box, useDisclosure } from '@chakra-ui/core'
+import { Flex, IconButton, useColorMode, Box, useDisclosure } from '@chakra-ui/react'
 
 import ShareModal from 'components/ShareModal'
 

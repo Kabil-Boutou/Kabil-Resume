@@ -1,5 +1,4 @@
-import React from 'react'
-import { Avatar, Text, Icon, Link } from '@chakra-ui/core'
+import { Avatar, Text, Icon, Link } from '@chakra-ui/react'
 
 export default function Quote({ name, linkedin, avatar, position, quote }) {
   return (

@@ -1,4 +1,4 @@
-import React from 'react'
+import { Fragment } from 'react'
 import AwesomeSlider from 'react-awesome-slider'
 import withAutoplay from 'react-awesome-slider/dist/autoplay'
 
@@ -18,9 +18,9 @@ const Slider = () => {
     >
       {state.lang_content.quotes.map((quote, key) => {
         return (
-          <React.Fragment key={key}>
+          <Fragment key={key}>
             <Quote {...quote} />
-          </React.Fragment>
+          </Fragment>
         )
       })}
     </AutoplaySlider>

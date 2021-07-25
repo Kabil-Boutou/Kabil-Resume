@@ -1,5 +1,4 @@
-import React from 'react'
-import { ThemeProvider, ColorModeProvider, Skeleton } from '@chakra-ui/core'
+import { ThemeProvider, Skeleton } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 
 import Meta from 'components/Meta'
@@ -17,13 +16,11 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={GlobalTheme}>
       <Meta />
-      <ColorModeProvider value="dark">
-        <GlobalStyle>
-          <Header />
-          {children}
-          <Footer />
-        </GlobalStyle>
-      </ColorModeProvider>
+      <GlobalStyle>
+        <Header />
+        {children}
+        <Footer />
+      </GlobalStyle>
     </ThemeProvider>
   )
 }

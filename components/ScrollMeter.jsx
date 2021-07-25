@@ -1,6 +1,5 @@
-import * as React from 'react'
 import { motion, useViewportScroll } from 'framer-motion'
-import { Box } from '@chakra-ui/core'
+import { Box } from '@chakra-ui/react'
 
 export default function ScrollMeter() {
   const { scrollYProgress } = useViewportScroll()

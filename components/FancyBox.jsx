@@ -1,5 +1,4 @@
-import React from 'react'
-import { Box, Heading, Text, useColorMode, useTheme } from '@chakra-ui/core'
+import { Box, Heading, Text, useColorMode, useTheme } from '@chakra-ui/react'
 
 export default function HalfContent({ title, desc, ...rest }) {
   const { colorMode } = useColorMode()

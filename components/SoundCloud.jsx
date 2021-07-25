@@ -1,5 +1,4 @@
-import React from 'react'
-import { Box } from '@chakra-ui/core'
+import { Box } from '@chakra-ui/react'
 
 export default function SoundCloud() {
   if (!String(process.env.SOUNDCLOUD_API)) return null

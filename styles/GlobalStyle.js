@@ -1,6 +1,5 @@
-import React from 'react'
-import { Global, css } from '@emotion/core'
-import { CSSReset, useColorMode, useTheme } from '@chakra-ui/core'
+import { Global, css } from '@emotion/react'
+import { CSSReset, useColorMode, useTheme } from '@chakra-ui/react'
 
 import { LightTheme, DarkTheme } from 'styles/mode'
 
