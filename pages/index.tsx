@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+/* import { useRouter } from 'next/router'
 import { Box, Heading, Flex, Stack, Avatar, SimpleGrid, Text, useTheme, useColorMode } from '@chakra-ui/react'
 
 import FancyBox from 'components/FancyBox'
@@ -96,4 +96,11 @@ export default function Index() {
       <SoundCloud />
     </>
   )
+}
+ */
+
+import React from 'react'
+
+export default function index() {
+  return <div></div>
 }

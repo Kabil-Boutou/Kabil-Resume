@@ -9,12 +9,12 @@
 /coverage
 
 # next.js
-/.next/
 /out/
 
 # production
-/build
-
+build/**
+dist/**
+.next/**
 # misc
 .DS_Store
 .env*
@@ -30,3 +30,6 @@ yarn-error.log*
 .now
 # docker
 /db-data
+
+# Turbo
+ .turbo

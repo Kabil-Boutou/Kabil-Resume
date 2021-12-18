@@ -12,39 +12,53 @@
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.6.4",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
     "@react-pdf/renderer": "latest",
-    "axios": "latest",
     "dotenv": "latest",
-    "framer-motion": "^4",
     "next": "latest",
-    "node-sass": "4",
     "react": "latest",
     "react-awesome-slider": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "sass": "latest"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "latest",
-    "@zeit/next-bundle-analyzer": "latest",
-    "@zeit/next-css": "^1.0.1",
-    "@zeit/next-sass": "^1.0.1",
-    "babel-eslint": "latest",
-    "commitizen": "^4.2.4",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "commitizen": "latest",
     "cross-env": "latest",
-    "cz-conventional-changelog": "3.1.0",
-    "cz-emoji": "^1.3.1",
+    "cz-conventional-changelog": "latest",
+    "cz-emoji": "latest",
     "eslint": "latest",
     "eslint-config-airbnb": "latest",
-    "eslint-config-next": "^11.0.1",
+    "eslint-config-next": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-jsx-a11y": "latest",
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
-    "husky": "^7.0.1",
+    "husky": "latest",
     "lint-staged": "latest",
-    "next-purgecss": "latest"
+    "next-purgecss": "latest",
+    "turbo": "^1.0.6",
+    "typescript": "latest"
+  },
+  "turbo": {
+    "baseBranch": "origin/master",
+    "pipeline": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          ".next/**"
+        ]
+      },
+      "lint": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
+    }
   },
   "config": {
     "commitizen": {
