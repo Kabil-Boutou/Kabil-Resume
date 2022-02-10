@@ -20,7 +20,7 @@
     "dotenv": "latest",
     "framer-motion": "^4",
     "next": "latest",
-    "node-sass": "4",
+    "node-sass": "7",
     "react": "latest",
     "react-awesome-slider": "latest",
     "react-dom": "latest"
