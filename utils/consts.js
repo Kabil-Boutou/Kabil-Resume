@@ -9,7 +9,7 @@ export const InitialGlobalReducer = {
 }
 
 export const FULL_NAME = 'Kabil Boutou'
-export const PHONE = '(+212)6-94-40-95-96'
-export const EMAIL = 'kabil.boutou@gmail.con'
+export const PHONE = '(+33)7-58-31-15-07'
+export const EMAIL = 'kabil.boutou@gmail.com'
 export const GITHUB = 'https://github.com/Kabil-Boutou'
 export const LINKEDIN = 'https://www.linkedin.com/in/kabil-boutou-8682bb129'

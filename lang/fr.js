@@ -1,15 +1,38 @@
 export default {
   share: 'Partager',
-  city: 'Maroc, Casablanca',
+  city: 'France, Paris',
   tech_stack: 'Technlogies utilisées',
   work_exp: 'Experiences professionnelle',
   workExp: [
     {
+      inc: 'Axa France',
+      logo: 'axa.png',
+      logoAlt: 'Axa',
+      post: 'Front end ',
+      period: 'Sep 2021 - présent',
+      intro:
+        "En tant que consultant Front End chez Axa, mon rôle principal était de migrer leur solution existante de l'AngularJs 1.5 obsolète vers la dernière version de react. J'ai eu l'entière responsabilité de choisir la Stack Front et convaincre le développeur Front avec mes choix. J'ai également dû écrire le pipeline pour le déploiement automatique dans Microsoft Azure et aider mes coéquipiers autant que nécessaire.",
+      tasks: [],
+      stack: 'React.Js, Zustand, React-query, Bootsrap 4, Azure.',
+    },
+    {
+      inc: 'Alter Solutions (France) ',
+      logo: 'alter.png',
+      logoAlt: 'Alter',
+      post: 'Full Stack ',
+      period: 'Sep 2021 - présent',
+      intro:
+        "Développement de sites & applications web pour le compte des clients de l'agence, conception des systèmes (Automatisation des process de facturation et mise en place d'un intranet) Accompagnement de la direction dans le processus de recrutement technique et encadrement des stagiaires.",
+      tasks: [],
+      stack:
+        'Node.Js, Express.Js/Nest.Js , GraphQL, React.Js/Next.Js/Remix.Js, Redux/Apollo, FireBase/Postgres, Trello, Jira , Github.',
+    },
+    {
       inc: 'Eqdom',
       logo: 'Eqdom.png',
       logoAlt: 'Eqdom',
-      post: 'Full Stack',
-      period: 'Juillet 2020 - présent',
+      post: 'Full Stack ',
+      period: 'Juillet 2020 - Juillet 2021',
       intro:
         "Entant que consultant Fullstack chez Eqdom, une société filiale du groupe SG, un leader des crédits/micro crédits. Ma mission est d'accompagner le client dans sa transformation digitale, améliorer le temps de crédit des dossiers avec un flux automatique et industrialisé, et permettant de donner au client son score en temps réel sous un cadre interactif et digital. Réaliser des jeux de démonstration pour les équipes client.",
       tasks: [],
@@ -19,7 +42,7 @@ export default {
       inc: 'Société Générale',
       logo: 'sg.png',
       logoAlt: 'Société Générale',
-      post: 'Développement Web',
+      post: 'Développement Web ',
       period: 'Août 2019 - Juin 2020',
       intro:
         "Réalisation du front avec les testes unitaire, coordonner avec les équipes client ainsi que mon équipe front pour avoir un produit structuré respectant les normes de la digitale factory Société Générale. Création d'un poc application mobile pour la direction générale assurant la facilité de communication entre les différentes filiales.",
@@ -30,7 +53,7 @@ export default {
       inc: 'Saham Group',
       logo: 'Saham.png',
       logoAlt: 'Saham Group',
-      post: 'Développement Web',
+      post: 'Développement Web ',
       period: 'Août 2018 - Juin 2019',
       intro:
         "Création «from scratch» d'une solution web assurance auto/voyage (B2C,B2B2C) pour le marché africain(UEMOA). Développement du Back-end d'application mobile d'assurance pour les particuliers (B2C). Ces plateformes ont pour but de faciliter la vente des produits d'assurance et garantir le relais entre les différents partenaires (banques, agrégateurs de paiements...etc)",
@@ -41,7 +64,7 @@ export default {
       inc: 'Maltem Africa',
       logo: 'Maltem.png',
       logoAlt: 'Maltem Africa',
-      post: 'Consultant',
+      post: 'Consultant ',
       period: 'Mai 2018 - présent',
       intro:
         'Réalisation des plateformes B2B et B2C pour les différents client Maltem sous différant thème (Banque, Assurance, Commerce ...), en utilisant des technologies souple et performante tout en gardant une interaction utilisateur simple et compréhensible.',
@@ -52,7 +75,7 @@ export default {
       inc: 'Urban Fusion',
       logo: 'uf.jpg',
       logoAlt: 'Urban Fusion',
-      post: 'Développement Web',
+      post: 'Développement Web ',
       period: 'Mars 2017 - Avril 2018',
       intro:
         "Développement de sites & applications web pour le compte des clients de l'agence, conception des systèmes (Automatisation des process de facturation et mise en place d'un intranet) Accompagnement de la direction dans le processus de recrutement technique et encadrement des stagiaires.",
